@@ -23,7 +23,7 @@ $(() => {
       (data) => {
         console.log(data[0]);
         console.log(data[0].meta.id.replace(":1",""));
-        $card.text(data[0].meta.id.replace(":1",""));
+        $card.text(data[0].meta.id.replace(":1","").replace(":2","").replace(":3",""));
           //sets each card's text to the chosen word
 
         let firstLetter = data[0].hwi.prs[0].sound.audio.charAt(0);
@@ -41,7 +41,13 @@ $(() => {
         }
         //subdirectory name assignment
         $audio.attr('controls','');
+        if (data[0].hwi.prs.length === 1){
         $audio.attr('src', 'https://media.merriam-webster.com/soundc11/' + subdirectory + '/' + data[0].hwi.prs[0].sound.audio + '.wav');
+      } else if (data[0].hwi.prs.length === 2 && data[0].hwi.prs[0].sound === true){
+        $audio.attr('src', 'https://media.merriam-webster.com/soundc11/' + subdirectory + '/' + data[0].hwi.prs[0].sound.audio + '.wav');
+      } else if (data[0].hwi.prs.length === 2 && data[0].hwi.prs[1].sound === true){
+        $audio.attr('src', 'https://media.merriam-webster.com/soundc11/' + subdirectory + '/' + data[0].hwi.prs[1].sound.audio + '.wav');
+      }
         //assigns the full audio url for each word to an audio element
 
         $definition.text(data[0].shortdef[0])
