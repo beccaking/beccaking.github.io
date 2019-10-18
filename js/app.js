@@ -9,7 +9,6 @@ $(() => {
     //creates six cards
 
     const randomWord = words[Math.floor(Math.random()*words.length)]
-    console.log(randomWord);
     //generates a random word
 
     $.ajax({
@@ -17,6 +16,8 @@ $(() => {
     }).then(
       (data) => {
         console.log(data[0]);
+        console.log(data[0].meta.id.replace(":1",""));
+        $card.text(data[0].meta.id.replace(":1",""));
       },
       (error) => {
         alert('error');
