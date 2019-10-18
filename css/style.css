@@ -2,13 +2,6 @@ body {
   background-color: navy;
 }
 
-button {
-  height: 20px;
-  width: 110px;
-  margin: 10px auto;
-  display: block;
-}
-
 div {
   height: 1000px;
   width: 600px;
@@ -26,6 +19,13 @@ div {
   background-color: cornflowerblue;
 }
 
+audio {
+margin: auto;
+position: relative;
+top: -60px;
+display: block;
+}
+
 .definition {
   width: 335px;
   height: 100px;
@@ -33,5 +33,6 @@ div {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 10px;
+  position: relative;
+  top: -60px;
 }

@@ -7,6 +7,10 @@ $(() => {
     const $card = $('<div>').addClass('card');
     $('.container').append($card);
     //creates six cards
+
+    const $audio = $('<audio>');
+    $('.container').append($audio);
+
     const $definition = $('<div>').addClass('definition');
     $('.container').append($definition);
 
@@ -20,8 +24,28 @@ $(() => {
         console.log(data[0]);
         console.log(data[0].meta.id.replace(":1",""));
         $card.text(data[0].meta.id.replace(":1",""));
+          //sets each card's text to the chosen word
+
+        let firstLetter = data[0].hwi.prs[0].sound.audio.charAt(0);
+        //fetches the first letter of the audio extension
+
+        let subdirectory = firstLetter;
+        //default subdirectory name is the first letter audio extension
+
+        if (firstLetter === "b" && data[0].hwi.prs[0].sound.audio.charAt(1) === "i" && data[0].hwi.prs[0].sound.audio.charAt(2) === "x"){
+          subdirectory = "bix";
+        } else if (firstLetter === "g" && data[0].hwi.prs[0].sound.audio.charAt(1) === "g"){
+          subdirectory = "gg";
+        } else if (firstLetter === "_" || firstLetter === "." || firstLetter === "1" || firstLetter === "1" || firstLetter === "2" || firstLetter === "3" || firstLetter === "4" || firstLetter === "5" || firstLetter === "6" || firstLetter === "7" || firstLetter === "8" || firstLetter === "9" || firstLetter === "0"){
+          subdirectory = "number";
+        }
+        //subdirectory name assignment
+        $audio.attr('controls','');
+        $audio.attr('src', 'https://media.merriam-webster.com/soundc11/' + subdirectory + '/' + data[0].hwi.prs[0].sound.audio + '.wav');
+        //assigns the full audio url for each word to an audio element
+
         $definition.text(data[0].shortdef[0])
-        //sets each card's text to the chosen word
+          //attaches the appropriate definition beneath each card
       },
       (error) => {
         alert('error');
