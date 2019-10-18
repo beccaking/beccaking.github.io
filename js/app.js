@@ -4,9 +4,11 @@ $(() => {
   //The Oxford 5000 list of words for advanced English learners
 
   for(let i=0;i<6;i++){
-    const $card = $('<div>').addClass('card').text('Word');
+    const $card = $('<div>').addClass('card');
     $('.container').append($card);
     //creates six cards
+    const $definition = $('<div>').addClass('definition');
+    $('.container').append($definition);
 
     const randomWord = words[Math.floor(Math.random()*words.length)]
     //generates a random word
@@ -18,6 +20,8 @@ $(() => {
         console.log(data[0]);
         console.log(data[0].meta.id.replace(":1",""));
         $card.text(data[0].meta.id.replace(":1",""));
+        $definition.text(data[0].shortdef[0])
+        //sets each card's text to the chosen word
       },
       (error) => {
         alert('error');

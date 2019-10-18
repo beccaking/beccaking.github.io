@@ -10,11 +10,9 @@ button {
 }
 
 div {
-  background-color: cornflowerblue;
-  height: 500px;
-  width: 700px;
+  height: 1000px;
+  width: 600px;
   margin: auto;
-  border: 2px solid black;
   display: flex;
   flex-wrap: wrap;
 }
@@ -25,4 +23,15 @@ div {
   border: 2px solid black;
   justify-content: center;
   align-items: center;
+  background-color: cornflowerblue;
+}
+
+.definition {
+  width: 335px;
+  height: 100px;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
