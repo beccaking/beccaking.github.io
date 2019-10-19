@@ -29,8 +29,21 @@ $(() => {
           const truncate =(string, number) => {
             return string.split(" ").splice(0, number).join(" ");
           }
-          $definition.text(truncate(data[0].shortdef[0],30));
-          //attaches the appropriate definition beneath each card
+          let index = 0;
+          let highestIndex = data[0].shortdef.length - 1;
+          $definition.text(truncate(data[0].shortdef[index],30));
+          //attaches the first definition to each card
+
+          if (data[0].shortdef.length > 1){
+            $definition.text(truncate(data[0].shortdef[index],25));
+            //attaches the first definition to each card
+            const $previous = $('<div>').addClass('carousel-button').addClass('previous').text('<');
+            $definition.append($previous)
+            //adds previous button
+            const $next = $('<div>').addClass('carousel-button').addClass('next').text('>');
+            $definition.append($next);
+            //adds next button
+          }
 
           $audio.attr('controls','');
           //adds play button, user interface for audio
