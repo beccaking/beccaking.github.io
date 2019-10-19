@@ -123,4 +123,15 @@ $(() => {
   }
   makeNewWords();
   //makes 25 new words and adds them to the page
+  const openModal = () => {
+    $('#modal').css('display', 'block');
+  }
+  $('#openModal').on('click', openModal);
+  //display About modal
+
+  const closeModal = () => {
+    $('#modal').css('display', 'none');
+  }
+  $('#close').on('click', closeModal);
+  //close About modal
 })

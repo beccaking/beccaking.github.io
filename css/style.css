@@ -2,12 +2,13 @@ body {
   background-color: navy;
 }
 
-p {
+h1 {
   font-size: 50px;
   text-align: center;
   font-family: arial;
   color: cornflowerblue;
   text-shadow: 2px 2px black;
+  cursor:pointer;
 }
 
 .container {
@@ -16,7 +17,7 @@ p {
 
 .card {
   width: 335px;
-  height: 150px;
+  height: 120px;
   border: 2px solid black;
   justify-content: center;
   align-items: center;
@@ -26,6 +27,8 @@ p {
   border-left: 2px solid black;
   margin: auto;
   text-align: center;
+  display: block;
+  padding-top: 30px;
 }
 
 audio {
@@ -37,7 +40,7 @@ display: block;
 
 .definition {
   width: 335px;
-  height: 100px;
+  height: 110px;
   background-color: grey;
   justify-content: center;
   align-items: center;
@@ -49,6 +52,7 @@ display: block;
   border-left: 2px solid black;
   border-top: 1px solid black;
   margin: auto;
+  padding-top:30px;
 }
 
 button {
@@ -79,4 +83,35 @@ button {
 .generate-button {
   position: relative;
   right: -400px;
+}
+
+.previous {
+  float: left;
+  margin: 15px;
+}
+
+.next {
+  float: right;
+  margin: 15px;
+}
+
+#modal {
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#modal-textbox {
+  background-color: white;
+  height: 350px;
+  width: 550px;
+  border-radius: 2px;
+  margin: 150px auto;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 }
