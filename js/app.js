@@ -26,7 +26,10 @@ const makeNewWords = () => {
         console.log(data[0].meta.id.replace(":1",""));
         $card.text(data[0].meta.id.replace(":1","").replace(":2","").replace(":3","").replace(":4",""));
         //sets each card's text to the chosen word
-        $definition.text(data[0].shortdef[0])
+        const truncate =(string, number) => {
+          return string.split(" ").splice(0, number).join(" ");
+        }
+        $definition.text(truncate(data[0].shortdef[0],30));
         //attaches the appropriate definition beneath each card
 
         $audio.attr('controls','');
