@@ -34,7 +34,7 @@ $(() => {
           $definitionText.text(truncate(data[0].shortdef[0],25));
           //attaches the first definition to each card
 
-          if (data[0].shortdef.length === 2){
+          if (data[0].shortdef.length > 1){
             const $previous = $('<div>').addClass('carousel-button').addClass('previous').text('<');
             $definition.append($previous)
             //add previous button
@@ -43,14 +43,23 @@ $(() => {
             //add next button
             let index = 0;
             $next.on('click', () => {
-              if (index < 1){
+              if (index < data[0].shortdef.length - 1){
               index++;
-            } else if (index === 1){
+            } else if (index === data[0].shortdef.length -1){
               index = 0;
             }
             $definitionText.text(truncate(data[0].shortdef[index],25))
             });
           //when next button is clicked, cycle through definitions
+          $previous.on('click', () => {
+            if (index > 0){
+              index--;
+            } else if (index === 0){
+              index = data[0].shortdef.length - 1;
+            }
+            $definitionText.text(truncate(data[0].shortdef[index],25))
+          });
+          //when previous button is clicked, cycle through definitions
 }
           $audio.attr('controls','');
           //adds play button, user interface for audio
