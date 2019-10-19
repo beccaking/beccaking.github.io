@@ -9,6 +9,9 @@ div {
   display: flex;
   flex-wrap: wrap;
 }
+.container {
+  display: block;
+}
 
 .card {
   width: 335px;
@@ -42,4 +45,13 @@ display: block;
   border-right: 2px solid black;
   border-left: 2px solid black;
   border-top: 1px solid black;
+}
+
+button {
+  height: 25px;
+  width: 150px;
+  position: relative;
+  right: -185px;
+  top: -30px;
+  margin: 40px;
 }
