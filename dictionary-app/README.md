@@ -21,4 +21,4 @@ Live site:
 
 ## Sources:
 * The Merriam-Webster Collegiate Dictionary API
-* The Oxford 5000 list of words for advanced English language learneres
+* The Oxford 5000 list of words for advanced English language learners
