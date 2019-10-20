@@ -17,7 +17,7 @@ h1 {
   text-align: center;
 }
 .card {
-  width: 80%;
+  width: 500px;
   height: 135px;
   border: 2px solid black;
   justify-content: center;
@@ -31,6 +31,7 @@ h1 {
   display: block;
   padding-top: 60px;
   font-size: 25px;
+  padding: 10px;
 }
 
 audio {
@@ -42,7 +43,7 @@ display: block;
 }
 
 .definition {
-  width: 80%;
+  width: 500px;
   height: 200px;
   background-color: grey;
   justify-content: center;
@@ -56,6 +57,7 @@ display: block;
   border-top: 1px solid black;
   margin: auto;
   font-size: 25px;
+  padding: 10px;
 }
 
 .part-of-speech {
@@ -69,6 +71,8 @@ display: block;
 .definition-text {
   position: relative;
   top: -15px;
+  margin: 5px;
+  padding: 5px;
 }
 
 button {
@@ -92,16 +96,23 @@ button {
   justify-content: center;
   margin: auto;
   cursor: pointer;
+  position: relative;
+  top: -80px;
+  padding: 5px;
 }
 
 .previous {
   float: left;
   margin: 15px;
+  position: relative;
+  left: -20px;
 }
 
 .next {
   float: right;
   margin: 15px;
+  position: relative;
+  right: -20px;
 }
 
 .generate-button {
@@ -159,7 +170,7 @@ button {
   }
 
   .card {
-    width: 335px;
+    width: 410px;
     height: 120px;
     padding-top: 30px;
     font-size: 20px;
@@ -171,7 +182,7 @@ button {
   }
 
   .definition {
-    width: 335px;
+    width: 410px;
     height: 150px;
     top: -60px;
     padding-top:30px;
@@ -186,10 +197,12 @@ button {
   .definition-text {
     position: relative;
     top: -15px;
+    right: -40px;
+    width: 300px;
   }
 
   .carousel-button {
-    font-size: 20px;
+    font-size: 30px;
   }
   .generate-button {
     width: 250px;
