@@ -32,7 +32,7 @@ $(() => {
           const truncate =(string, number) => {
             return string.split(" ").splice(0, number).join(" ");
           }
-          const $definitionText = $('<div>');
+          const $definitionText = $('<div>').addClass('definition-text');
           $definition.append($definitionText);
           $definitionText.text(truncate(data[0].shortdef[0],25));
           //attach the first definition to each card

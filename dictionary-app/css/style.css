@@ -1,3 +1,4 @@
+/* For mobile */
 body {
   background-color: navy;
 }
@@ -16,7 +17,7 @@ h1 {
   text-align: center;
 }
 .card {
-  width: 400px;
+  width: 80%;
   height: 135px;
   border: 2px solid black;
   justify-content: center;
@@ -41,7 +42,7 @@ display: block;
 }
 
 .definition {
-  width: 400px;
+  width: 80%;
   height: 200px;
   background-color: grey;
   justify-content: center;
@@ -54,13 +55,20 @@ display: block;
   border-left: 2px solid black;
   border-top: 1px solid black;
   margin: auto;
-  padding-top:60px;
   font-size: 25px;
 }
 
 .part-of-speech {
   font-style: italic;
   padding: 5px;
+  padding-bottom: 15px;
+  position: relative;
+  top: -5px;
+}
+
+.definition-text {
+  position: relative;
+  top: -15px;
 }
 
 button {
@@ -79,14 +87,11 @@ button {
 
 .carousel-button {
   text-align: center;
-  background: navy;
   font-size: 30px;
-  width: 40px;
-  height: 40px;
-  color: white;
+  color: black;
   justify-content: center;
-  border-radius: 100%;
   margin: auto;
+  cursor: pointer;
 }
 
 .previous {
@@ -137,12 +142,17 @@ button {
   text-align: center;
 }
 
+#modal-heading {
+  font-size: 60px;
+}
+
 #close {
   margin: auto;
   margin-top: 50px;
   margin-right: 350px;
 }
 
+/* For desktop */
 @media (min-width: 600px){
   h1 {
     font-size: 50px;
@@ -168,10 +178,18 @@ button {
     font-size: 20px;
   }
 
+  .part-of-speech {
+    position: relative;
+    top: -15px;
+  }
+
+  .definition-text {
+    position: relative;
+    top: -15px;
+  }
+
   .carousel-button {
     font-size: 20px;
-    height: 30px;
-    width: 30px;
   }
   .generate-button {
     width: 250px;
@@ -179,6 +197,16 @@ button {
     margin-bottom: 80px;
     font-size: 20px;
     padding: 10px;
-    }
+  }
+
+  #modal-textbox {
+    height: 300px;
+    width: 550px;
+    margin: 150px auto;
+  }
+
+  #close {
+    margin-top: 50px;
+    margin-right: 350px;
   }
 }
