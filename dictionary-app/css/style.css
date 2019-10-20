@@ -40,9 +40,14 @@ top: -60px;
 display: block;
 }
 
+.part-of-speech {
+  font-style: italic;
+  padding: 5px;
+}
+
 .definition {
   width: 335px;
-  height: 110px;
+  height: 150px;
   background-color: grey;
   justify-content: center;
   align-items: center;

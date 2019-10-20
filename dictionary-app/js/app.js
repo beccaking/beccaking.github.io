@@ -25,14 +25,17 @@ $(() => {
           console.log(data[0]);
           console.log(data[0].meta.id.replace(":1",""));
           $card.text(data[0].meta.id.replace(":1","").replace(":2","").replace(":3","").replace(":4",""));
-          //sets each card's text to the chosen word
+          //set each card's text to the chosen word
+          const $partOfSpeech = $('<div>').text(data[0].fl).addClass('part-of-speech');
+          $definition.append($partOfSpeech);
+          //add the part of speech to each card
           const truncate =(string, number) => {
             return string.split(" ").splice(0, number).join(" ");
           }
           const $definitionText = $('<div>');
           $definition.append($definitionText);
           $definitionText.text(truncate(data[0].shortdef[0],25));
-          //attaches the first definition to each card
+          //attach the first definition to each card
 
           if (data[0].shortdef.length > 1){
             const $previous = $('<div>').addClass('carousel-button').addClass('previous').text('<');
@@ -62,7 +65,7 @@ $(() => {
           //when previous button is clicked, cycle through definitions
 }
           $audio.attr('controls','');
-          //adds play button, user interface for audio
+          //add play button, user interface for audio
 
           // if(data[0].hwi.prs[0].sound.audio === true){
           let subdirectory = data[0].hwi.prs[0].sound.audio.charAt(0)
