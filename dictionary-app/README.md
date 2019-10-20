@@ -1,9 +1,23 @@
 # beccaking.github.io
-Random word generator with definitions, pronunciation
+## Random word generator with definitions, pronunciation
 Live site: beccaking.github.io/dictionary-app
 
-I used the Merriam-Webster Collegiate Dictionary API to populate a random word generator with definitions and audio pronunciations.
+## App functions:
+*Generates random words 
+*Provides audio pronunciations for each word
+*Provides 1-3 common definitions for each word
 
-Words come from the Oxford 5000 list of words for advanced English language learners.
+## Design features:
+*Modal gives meta data on click
+*Clickable carousel of definitions for each word
+*Click to generate new words
 
-Built with jQuery, HTML, JavaScript, and CSS. 
+## Built with:
+*JavaScript
+*jQuery
+*HTML
+*CSS
+
+## Sources:
+*The Merriam-Webster Collegiate Dictionary API
+*The Oxford 5000 list of words for advanced English language learneres
