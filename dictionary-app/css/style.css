@@ -5,10 +5,13 @@ body {
 
 h1 {
   color: cornflowerblue;
-  font-size: 70px;
+  font-size: 30px;
   font-family: arial;
   text-shadow: 2px 2px black;
   cursor: pointer;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 40px;
 }
 .container {
   display: block;
@@ -17,8 +20,8 @@ h1 {
   text-align: center;
 }
 .card {
-  width: 500px;
-  height: 135px;
+  width: 80%;
+  height: 100px;
   border: 2px solid black;
   justify-content: center;
   align-items: center;
@@ -30,7 +33,7 @@ h1 {
   text-align: center;
   display: block;
   padding-top: 60px;
-  font-size: 25px;
+  font-size: 15px;
   padding: 10px;
 }
 
@@ -40,11 +43,12 @@ position: relative;
 top: -90px;
 justify-content: center;
 display: block;
+width: 80%;
 }
 
 .definition {
-  width: 500px;
-  height: 200px;
+  width: 80%;
+  height: 130px;
   background-color: grey;
   justify-content: center;
   align-items: center;
@@ -56,7 +60,7 @@ display: block;
   border-left: 2px solid black;
   border-top: 1px solid black;
   margin: auto;
-  font-size: 25px;
+  font-size: 15px;
   padding: 10px;
 }
 
@@ -91,26 +95,24 @@ button {
 
 .carousel-button {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   color: black;
   justify-content: center;
-  margin: auto;
   cursor: pointer;
   position: relative;
   top: -80px;
   padding: 5px;
+  margin: 5px;
 }
 
 .previous {
   float: left;
-  margin: 15px;
   position: relative;
   left: -20px;
 }
 
 .next {
   float: right;
-  margin: 15px;
   position: relative;
   right: -20px;
 }
@@ -121,14 +123,16 @@ button {
     align-items: center;
     background-color: white;
     color: black;
-    width: 400px;
-    height: 50px;
+    width: 80%;
+    height: 25px;
     text-align: center;
     cursor: pointer;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 10px;
     padding-top: 10px;
     margin-bottom: 100px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 #modal {
@@ -145,8 +149,8 @@ button {
 
 #modal-textbox {
   background-color: white;
-  height: 300px;
-  width: 550px;
+  height: 50%;
+  width: 80%;
   border-radius: 2px;
   margin: 150px auto;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
@@ -154,13 +158,14 @@ button {
 }
 
 #modal-heading {
-  font-size: 60px;
+  font-size: 20px;
+  text-shadow: 1px 1px black;
 }
 
 #close {
-  margin: auto;
-  margin-top: 50px;
-  margin-right: 350px;
+position: relative;
+left: 90px;
+top: -50px;
 }
 
 /* For desktop */
