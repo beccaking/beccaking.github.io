@@ -184,6 +184,7 @@ top: -50px;
   audio {
   position: relative;
   top: -60px;
+  width: 200px;
   }
 
   .definition {
