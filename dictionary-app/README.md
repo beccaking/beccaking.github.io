@@ -1,6 +1,7 @@
 # beccaking.github.io
 ## Random word generator with definitions, pronunciation
-Live site: ### (beccaking.github.io/dictionary-app)
+Live site: 
+### (beccaking.github.io/dictionary-app)
 
 ## App functions:
 * Generates random words 
