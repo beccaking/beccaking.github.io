@@ -11,7 +11,7 @@ h1 {
   cursor: pointer;
   justify-content: center;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 .container {
   display: block;
@@ -48,7 +48,7 @@ width: 150px;
 
 .definition {
   width: 200px;
-  height: 130px;
+  height: 140px;
   background-color: grey;
   justify-content: center;
   align-items: center;
@@ -222,10 +222,24 @@ top: -50px;
     height: 300px;
     width: 550px;
     margin: 150px auto;
+    font-size: 20px;
+  }
+
+  #modal-textbox > p {
+    position: relative;
+    top: -40px;
   }
 
   #close {
     margin-top: 50px;
-    margin-right: 350px;
+    position: relative;
+    left: -5px;
+    top: -30px;
+  }
+
+  #modal-heading {
+    font-size: 30px;
+    padding: 10px;
+    text-shadow: 1px 1px black;
   }
 }
