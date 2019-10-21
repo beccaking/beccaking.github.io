@@ -1,6 +1,6 @@
 /* For mobile */
 body {
-  background-color: midnightblue;
+  background-color: #191970;
 }
 
 h1 {
@@ -175,6 +175,7 @@ button {
 position: relative;
 left: 90px;
 top: -50px;
+cursor: pointer;
 }
 
 /* For desktop */
