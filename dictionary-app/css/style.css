@@ -17,6 +17,10 @@ h1 {
   border-bottom: 3px solid black;
 }
 
+h1:hover {
+  color: lightsteelblue;
+}
+
 h2 {
   color: cornflowerblue;
   margin-bottom: 50px;
