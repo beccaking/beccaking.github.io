@@ -11,10 +11,16 @@ h1 {
   cursor: pointer;
   justify-content: center;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 80px;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
+}
+
+h2 {
+  color: cornflowerblue;
+  margin-bottom: 50px;
+  font-size: 15px;
 }
 .container {
   display: block;
@@ -175,6 +181,10 @@ top: -50px;
 @media (min-width: 600px){
   h1 {
     font-size: 50px;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 
   .card {
