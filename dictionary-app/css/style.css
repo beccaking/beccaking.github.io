@@ -162,7 +162,7 @@ button {
 
 #modal-textbox {
   background-color: lightsteelblue;
-  height: 50%;
+  height: 60%;
   width: 80%;
   border-radius: 2px;
   margin: 150px auto;
@@ -174,11 +174,12 @@ button {
 #modal-heading {
   font-size: 20px;
   text-shadow: 1px 1px black;
+  margin-bottom: 10px;
 }
 
 #close {
 position: relative;
-left: 90px;
+left: 5px;
 top: -50px;
 cursor: pointer;
 }
@@ -261,5 +262,6 @@ cursor: pointer;
     font-size: 30px;
     padding: 10px;
     text-shadow: 1px 1px black;
+    margin-bottom: 50px;
   }
 }
