@@ -1,6 +1,6 @@
 /* For mobile */
 body {
-  background-color: midnightblue;
+  background: #000066;
 }
 
 h1 {
@@ -13,8 +13,8 @@ h1 {
   margin: auto;
   margin-bottom: 50px;
   margin-top: 80px;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  border-top: 3px solid lightsteelblue;
+  border-bottom: 3px solid lightsteelblue;
 }
 
 #openModal:hover {
