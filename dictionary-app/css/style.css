@@ -12,7 +12,7 @@ h1 {
   justify-content: center;
   margin: auto;
   margin-bottom: 50px;
-  margin-top: 80px;
+  margin-top: 40px;
   border-top: 3px solid lightsteelblue;
   border-bottom: 3px solid lightsteelblue;
 }
@@ -23,9 +23,18 @@ h1 {
 
 h2 {
   color: cornflowerblue;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-size: 15px;
   font-family: 'Lato', sans-serif;
+}
+
+img {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: lightsteelblue;
 }
 .container {
   display: block;
