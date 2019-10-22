@@ -130,7 +130,7 @@ $(() => {
   const openModal = () => {
     $('#modal').css('display', 'block');
   }
-  $('#openModal').on('click', openModal);
+  $('.openModal').on('click', openModal);
   //display About modal
 
   const closeModal = () => {
