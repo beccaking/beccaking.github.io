@@ -12,6 +12,7 @@ Live site:
 * Modal gives meta data on click
 * Clickable carousel of definitions for each word
 * Click to generate new words
+* Mobile-friendly responsive design 
 
 ## Built with:
 * JavaScript
