@@ -1818,6 +1818,111 @@ const plants = [
     genus: 'Juncales',
     count: 1,
     url: 'https://www.nwf.org/NativePlantFinder/Plants/2016'
+  },
+  {
+    name: ['buckthorn'],
+    species: 'Frangula',
+    genus: 'Rhamnales',
+    count: 9,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/1355'
+  },
+  {
+    name: ['mulberry'],
+    species: 'Morus',
+    genus: 'Urticales',
+    count: 9,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/2228'
+  },
+  {
+    name: ['bittersweet'],
+    species: 'Celastrus',
+    genus: 'Celastrales',
+    count: 8,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/641'
+  },
+  {
+    name: ['hoptree'],
+    species: 'Ptelea',
+    genus: 'Sapindales',
+    count: 8,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/2769'
+  },
+  {
+    name: ['osage-orange'],
+    species: 'Maclura',
+    genus: 'Urticales',
+    count: 8,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/2047'
+  },
+  {
+    name: ['trumpetcreeper', 'trumpet vine'],
+    species: 'Campsis',
+    genus: 'Scrophulariales',
+    count: 7,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/564'
+  },
+  {
+    name: ['swamp loosestrife'],
+    species: 'Decodon',
+    genus: 'Myrtales',
+    count: 5,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/1010'
+  },
+  {
+    name: ['bush honeysuckle'],
+    species: 'Diervilla',
+    genus: 'Dispacales',
+    count: 4,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/1064'
+  },
+  {
+    name: ['mock orange'],
+    species: 'Philadelphus',
+    genus: 'Rosales',
+    count: 4,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/2557'
+  },
+  {
+    name: ['leatherwood'],
+    species: 'Dirca',
+    genus: 'Myrtales',
+    count: 3,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/1090'
+  },
+  {
+    name: ['matrimony vine', 'desert-thorn'],
+    species: 'Lycium',
+    genus: 'Solanales',
+    count: 3,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/2020'
+  },
+  {
+    name: ['bladdernut'],
+    species: 'Staphylea',
+    genus: 'Sapindales',
+    count: 2,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/3127'
+  },
+  {
+    name: ['snowberry'],
+    species: 'Gaultheria',
+    genus: 'Ericales',
+    count: 2,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/1397'
+  },
+  {
+    name: ['moonseed'],
+    species: 'Menispermum',
+    genus: 'Ranunculales',
+    count: 1,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/2144'
+  },
+  {
+    name: ['swallow-wort'],
+    species: 'Cynanchum',
+    genus: 'Gentianales',
+    count: 1,
+    url: 'https://www.nwf.org/NativePlantFinder/Plants/3653'
   }
 ]
 
