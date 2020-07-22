@@ -476,13 +476,6 @@ const plants = [
     url: 'https://www.nwf.org/NativePlantFinder/Plants/356'
   },
   {
-    name: ['indigo', 'wild indigo'],
-    species: 'Baptisia',
-    genus: 'Fabales',
-    count: 17,
-    url: 'https://www.nwf.org/NativePlantFinder/Plants/356'
-  },
-  {
     name: ['whitetop'],
     species: 'Doellingeria',
     genus: 'Asterales',
@@ -742,13 +735,6 @@ const plants = [
     url: 'https://www.nwf.org/NativePlantFinder/Plants/1285'
   },
   {
-    name: ['spurge', 'snow-on-the-mountain'],
-    species: 'Euphorbia',
-    genus: 'Euphorbiales',
-    count: 9,
-    url: 'https://www.nwf.org/NativePlantFinder/Plants/1285'
-  },
-  {
     name: ['cinnamon fern', 'royal fern', 'interrupted fern'],
     species: 'Osmunda',
     genus: 'Polypodiales',
@@ -911,7 +897,7 @@ const plants = [
   },
   {
     name: ['maiden fern', 'New York fern'],
-    species: 'Thelpteris',
+    species: 'Thelypteris',
     genus: 'Polypodiales',
     count: 6,
     url: 'https://www.nwf.org/NativePlantFinder/Plants/3274'
