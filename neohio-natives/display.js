@@ -17,22 +17,20 @@ for (i=0;i<plants.length;i++){
   let plant = document.createElement('div')
   plant.classList.add('plant')
   plant.classList.add(plants[i].species)
-  if(plants[i].count < 50){
-    plant.classList.add('small')
-    console.log('small')
-  } else if(50 <= plants[i].count < 150){
-    plant.classList.add('mid')
-    console.log('mid')
-  } else if(150 <= plants[i].count < 300){
-    console.log('large')
-    plant.classList.add('large')
-  } else if (300 <= plants[i].count){
-    plant.classList.add('extra-large')
-    console.log('extra-large')
-  }
+
 
   container[0].append(plant)
 
   plant.style.backgroundImage = "url('./images/" + plants[i].species +".jpeg')"
+  if(plants[i].count < 30){
+    plant.style.width = plants[i].count*20 + 'px';
+    plant.style.height = plants[i].count*20 + 'px';
+  } else if (30 <= plants[i].count < 100) {
+    plant.style.width = plants[i].count*5 + 'px';
+    plant.style.height = plants[i].count*5 + 'px';
+  } else {
+    plant.style.width = plants[i].count + 'px';
+    plant.style.height = plants[i].count + 'px';
+  }
 
 }
