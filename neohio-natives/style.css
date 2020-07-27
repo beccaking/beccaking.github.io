@@ -4,15 +4,77 @@ body {
   background: #a1bfa1;
 }
 
+div.plant {
+  border: 1px solid lightgrey;
+  background-size: cover;
+  box-shadow: 2px 2px 1px grey;
+  margin: 3px;
+}
+
+div.plant:hover {
+  box-shadow: 2px 2px 1px white;
+  border: 1px solid grey;
+}
+
 div.photo-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  border: 3px solid lightsteelblue;
 }
 
-div.plant {
-  border: 1px solid lightgrey;
-  background-size: cover;
+div.mid-photo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid lightsteelblue;
+}
+
+div.small-photo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid lightsteelblue;
+}
+
+span {
+  font-size: 16px;
+  margin: 10px;
+}
+span.label {
+  font-size: 20px;
+}
+span.instruction {
+  font-style: italic;
+  font-size: 14px;
+}
+span.click, span.click-mid, span.click-large {
+  font-style: italic;
+  font-size: 14px;
+  height: fit-content;
+  background: #708871;
+  padding: 10px;
+  border: 1px solid white;
+}
+span.click:hover, span.click-mid:hover, span.click-large:hover {
+  cursor: pointer;
+}
+
+div.plant.grid-large {
+  width: 200px !important;
+  height: 200px !important;
+}
+div.plant.grid-mid {
+  width: 80px !important;
+  height: 80px !important;
+}
+div.plant.grid-small {
+  width: 40px !important;
+  height: 40px !important;
 }
