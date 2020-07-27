@@ -19,8 +19,7 @@ for (i=0;i<plants.length;i++){
   let plant = document.createElement('div')
   plant.classList.add('plant')
   plant.classList.add(plants[i].species)
-
-
+  plant.setAttribute('id', plants[i].species)
 
   plant.style.backgroundImage = "url('./images/" + plants[i].species +".jpeg')"
   if(plants[i].count < 30){

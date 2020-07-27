@@ -78,3 +78,23 @@ div.plant.grid-small {
   width: 40px !important;
   height: 40px !important;
 }
+
+div.information {
+  background: white;
+  display: none;
+  margin-top: 100%;
+}
+
+div.modal {
+  display: none;
+  width: 100%;
+  height: 3400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #202120d6;
+}
+
+div.information.showing {
+  display: block;
+}
