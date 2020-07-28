@@ -95,6 +95,7 @@ img.thumbnail {
   width: 300px;
   height: 300px;
   margin: 25px;
+  object-fit: cover;
 }
 
 span.close {
