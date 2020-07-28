@@ -82,6 +82,7 @@ div.information {
   display: none;
   padding: 10px;
   height: fit-content;
+  margin: 10px auto;
 }
 
 div.information.showing {
