@@ -6,13 +6,19 @@ body {
 div.plant {
   border: 1px solid lightgrey;
   background-size: cover;
-  box-shadow: 2px 2px 1px grey;
+  box-shadow: 2px 2px 1px #354e35;
   margin: 8px;
+}
+div.small-photo-container div.plant {
+  box-shadow: 1px 1px 1px #354e35;
+}
+div.mid-photo-container div.plant {
+  box-shadow: 1px 1px 1px #354e35;
 }
 
 div.plant:hover {
-  box-shadow: 2px 2px 1px white;
-  border: 1px solid grey;
+  box-shadow: 1px 1px 1px white;
+  border: 1px solid #354e35;
 }
 
 div.photo-container {
@@ -22,7 +28,7 @@ div.photo-container {
   flex-direction: row;
   flex-wrap: wrap;
   border: 3px solid #354e35;
-  background: #354e35;
+  background: #466946;
   padding: 8px;
 }
 
