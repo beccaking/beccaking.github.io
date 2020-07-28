@@ -54,7 +54,7 @@ for(i=0;i<plantimages.length;i++){
   information[i].append(number)
 
   let moreinfo = document.createElement('span')
-  moreinfo.innerHTML = '<br><a class="more" href="' + url + '">Click here for more information from the National Wildlife Foundation</a>'
+  moreinfo.innerHTML = '<br><a class="more" href="' + url + '">Click here for more information</a>'
   information[i].append(moreinfo)
 
   let image = document.createElement('img')

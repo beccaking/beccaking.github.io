@@ -7,7 +7,7 @@ div.plant {
   border: 1px solid lightgrey;
   background-size: cover;
   box-shadow: 2px 2px 1px grey;
-  margin: 3px;
+  margin: 8px;
 }
 
 div.plant:hover {
@@ -21,7 +21,9 @@ div.photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 3px solid lightsteelblue;
+  border: 3px solid #354e35;
+  background: #354e35;
+  padding: 8px;
 }
 
 div.mid-photo-container {
@@ -30,7 +32,9 @@ div.mid-photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 2px solid lightsteelblue;
+  border: 2px solid #354e35;
+  background: #466946;
+  padding: 8px;
 }
 
 div.small-photo-container {
@@ -39,7 +43,9 @@ div.small-photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid lightsteelblue;
+  border: 1px solid #354e35;
+  background: #466946;
+  padding: 8px;
 }
 
 span {
@@ -59,6 +65,8 @@ span.click, span.click-mid, span.click-large {
   background: #708871;
   padding: 10px;
   border: 1px solid white;
+  margin: 8px;
+  margin-right: 6px;
 }
 span.click:hover, span.click-mid:hover, span.click-large:hover {
   cursor: pointer;
@@ -113,4 +121,59 @@ div.modal {
   height: 4500px;
   width: 100%;
   z-index: 0;
+}
+
+a.more  {
+  float: left;
+}
+div.plant {
+  color: transparent;
+}
+div.photo-container div.plant span {
+  display: block;
+}
+div.photo-container img.butterfly {
+  opacity: 0;
+  float: left;
+}
+div.photo-container div.plant:hover span{
+  color: black;
+}
+div.photo-container div.plant:hover img.butterfly {
+  opacity: 1;
+}
+div.photo-container span.count {
+  padding: 7px;
+}
+div.photo-container div.plant:hover span.hover {
+  background: #ffffff87;
+  height: 36px;
+}
+div.photo-container div.plant:hover span.name {
+float: right;
+margin-top: -29px;
+margin-right: 4px;
+}
+div.photo-container div.plant.Amelanchier:hover span.name, div.photo-container div.plant.Viburnum:hover span.name {
+  float: none;
+}
+div.photo-container div.plant.Cornus:hover span, div.photo-container div.plant.Solidago span, div.photo-container div.plant.Castanea span {
+font-size: 13px;
+}
+div.photo-container div.plant.Amelanchier:hover span.hover, div.photo-container div.plant.Viburnum:hover span.hover {
+  height:53px;
+}
+
+div.photo-container div.plant.grid-large.Amelanchier:hover span.name, div.photo-container div.plant.grid-large.Viburnum:hover span.name {
+  float: right;
+}
+div.photo-container div.plant.grid-large.Cornus:hover span, div.photo-container div.plant.grid-large.Solidago span, div.photo-container div.plant.grid-large.Castanea span {
+font-size: 14px;
+}
+div.photo-container div.plant.grid-large.Amelanchier:hover span.hover, div.photo-container div.plant.grid-large.Viburnum:hover span.hover {
+  height:36px;
+}
+
+div.mid-photo-container img.butterfly, div.small-photo-container img.butterfly {
+  opacity: 0;
 }
