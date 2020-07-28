@@ -78,13 +78,38 @@ div.plant.grid-small {
 }
 
 div.information {
-  background: #ffffff94;
+  background: #ffffff;
   display: none;
   padding: 10px;
+  padding-bottom: 0;
   height: fit-content;
   margin: 10px auto;
+  z-index: 10;
 }
 
 div.information.showing {
   display: block;
+}
+
+img.thumbnail {
+  width: 300px;
+  height: 300px;
+  margin: 25px;
+}
+
+span.close {
+  cursor: pointer;
+  font-size: 22px;
+  float: right;
+}
+
+div.modal {
+  display: none;
+  background: #313131c7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4000px;
+  width: 100%;
+  z-index: 0;
 }

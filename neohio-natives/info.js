@@ -8,6 +8,23 @@ for(i=0;i<plantimages.length;i++){
 
   let information = document.getElementsByClassName('information')
 
+  let close = document.createElement('span')
+  close.innerHTML = 'X'
+  close.classList.add('close')
+  let currentImage = plantimages[i]
+  close.addEventListener('click', function(){
+    theinformation.classList.remove('showing')
+    currentImage.style.border = '1px solid lightgrey';
+
+    for (l=0;l<plantimages.length;l++){
+      plantimages[l].style.zIndex='0'
+    }
+
+        modal[0].style.display = 'none'
+  })
+
+  information[i].append(close)
+
     for(j=0;j<plants.length;j++){
       if(species == plants[j].species){
         var genus = plants[j].genus
@@ -33,22 +50,28 @@ for(i=0;i<plantimages.length;i++){
   }
 
   let number = document.createElement('span')
-  number.innerHTML = '<br>Supports ' + count + ' Species<br>'
+  number.innerHTML = '<br>Supports ' + count + ' species of moths and butterflies<br>'
   information[i].append(number)
 
   let moreinfo = document.createElement('span')
   moreinfo.innerHTML = '<br><a class="more" href="' + url + '">Click here for more information from the National Wildlife Foundation</a>'
   information[i].append(moreinfo)
 
+  let image = document.createElement('img')
+  image.setAttribute('src', './images/'+species + '.jpeg')
+  image.classList.add('thumbnail')
+  information[i].append(image)
+
+  let modal = document.getElementsByClassName('modal')
   let theinformation = information[i]
 
   plantimages[i].addEventListener('click', function(){
-    if(theinformation.classList.contains('showing')){
-      theinformation.classList.remove('showing')
-      this.style.border = '1px solid lightgrey';
-    } else {
       this.style.border = '3px solid white';
       theinformation.classList.add('showing')
+      for (m=0;m<plantimages.length;m++){
+        plantimages[m].style.zIndex='-10'
     }
+    modal[0].style.display = 'block'
   })
+
 }
