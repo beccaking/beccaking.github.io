@@ -3,16 +3,10 @@ let plantimages = document.getElementsByClassName('plant')
 for(i=0;i<plantimages.length;i++){
   let species = plantimages[i].getAttribute('id')
 
-  let information = document.createElement('div')
-  information.classList.add('information')
 
-  let speciesname = document.createElement('span')
-  speciesname.innerHTML = 'Species: <em>' + species +'</em>'
+  plantimages[i].insertAdjacentHTML('afterend', '<div class="information"></div>')
 
-  information.append(speciesname)
-
-  plantimages[i].append(information)
-
+  let information = document.getElementsByClassName('information')
 
     for(j=0;j<plants.length;j++){
       if(species == plants[j].species){
@@ -23,41 +17,38 @@ for(i=0;i<plantimages.length;i++){
       }
     }
 
+  let speciesname = document.createElement('span')
+  speciesname.innerHTML = 'Species: <em>' + species +'</em>'
+
+  information[i].append(speciesname)
+
   let genusname = document.createElement('span')
   genusname.innerHTML = '<br>Genus: <em>' + genus + '</em><br> <br>Common Name(s):<br>'
-  information.append(genusname)
+  information[i].append(genusname)
 
   for(k=0;k<names.length;k++){
     let commonname = document.createElement('span')
     commonname.innerHTML = names[k] + '<br>'
-    information.append(commonname)
+    information[i].append(commonname)
   }
 
   let number = document.createElement('span')
   number.innerHTML = '<br>Supports ' + count + ' Species<br>'
-  information.append(number)
+  information[i].append(number)
 
   let moreinfo = document.createElement('span')
   moreinfo.innerHTML = '<br><a class="more" href="' + url + '">Click here for more information from the National Wildlife Foundation</a>'
-  information.append(moreinfo)
+  information[i].append(moreinfo)
 
-  let modal = document.getElementsByClassName('modal')
+  let theinformation = information[i]
 
   plantimages[i].addEventListener('click', function(){
-    if(information.classList.contains('showing')){
-      this.style.zIndex='0'
-      information.classList.remove('showing')
-      modal[0].style.display = 'none'
-      smallcontainer.style.zIndex='0';
-      midcontainer.style.zIndex='0';
-      container.style.zIndex='0';
+    if(theinformation.classList.contains('showing')){
+      theinformation.classList.remove('showing')
+      this.style.border = '1px solid lightgrey';
     } else {
-      this.style.zIndex='10';
-      information.classList.add('showing')
-      modal[0].style.display = 'block'
-      smallcontainer.style.zIndex='-10';
-      midcontainer.style.zIndex='-10';
-      container.style.zIndex='-10';
+      this.style.border = '3px solid white';
+      theinformation.classList.add('showing')
     }
   })
 }

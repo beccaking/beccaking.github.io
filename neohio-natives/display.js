@@ -2,9 +2,9 @@
 //Resize original images to production size to speed up page load
 //Intersperse divs with quotes from Dr. Tallamy about the importance of native species, facts from his books, plugs for his books, esp newest- Nature's Best Hope
 
-let container = document.getElementsByClassName('photo-container');
-let midcontainer = document.getElementsByClassName('mid-photo-container');
-let smallcontainer = document.getElementsByClassName('small-photo-container');
+var container = document.getElementsByClassName('photo-container');
+var midcontainer = document.getElementsByClassName('mid-photo-container');
+var smallcontainer = document.getElementsByClassName('small-photo-container');
 
 
 for (i=0;i<plants.length;i++){
