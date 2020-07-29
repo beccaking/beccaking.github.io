@@ -239,7 +239,7 @@ div.mid-photo-container div.plant span.name {
 margin-top: -15px;
 margin-right: 4px;
 }
-div.mid-photo-container div.plant.Spiraea:hover {
+/* div.mid-photo-container div.plant.Spiraea:hover {
   width: 78px !important;
   height: 78px !important;
 }
@@ -286,23 +286,54 @@ div.mid-photo-container div.plant.Platanus:hover {
 div.mid-photo-container div.plant.Ceanothus:hover {
   width: 61px !important;
   height: 61px !important;
-}
-div.mid-photo-container.grid div.plant.Ceanothus:hover,
-div.mid-photo-container.grid div.plant.Platanus:hover,
-div.mid-photo-container.grid div.plant.Eupatorium:hover,
-div.mid-photo-container.grid div.plant.Ilex:hover,
-div.mid-photo-container.grid div.plant.Aesculus:hover,
-div.mid-photo-container.grid div.plant.Gleditsia:hover,
-div.mid-photo-container.grid div.plant.Physocarpus:hover,
-div.mid-photo-container.grid div.plant.Sambucus:hover,
-div.mid-photo-container.grid div.plant.Gaylussacia:hover,
-div.mid-photo-container.grid div.plant.Nyssa:hover,
-div.mid-photo-container.grid div.plant.Sassafras:hover,
-div.mid-photo-container.grid div.plant.Spiraea:hover {
+} */
+
+div.mid-photo-container div.plant.Ceanothus:hover,
+div.mid-photo-container div.plant.Platanus:hover,
+div.mid-photo-container div.plant.Eupatorium:hover,
+div.mid-photo-container div.plant.Ilex:hover,
+div.mid-photo-container div.plant.Aesculus:hover,
+div.mid-photo-container div.plant.Gleditsia:hover,
+div.mid-photo-container div.plant.Physocarpus:hover,
+div.mid-photo-container div.plant.Sambucus:hover,
+div.mid-photo-container div.plant.Gaylussacia:hover,
+div.mid-photo-container div.plant.Nyssa:hover,
+div.mid-photo-container div.plant.Sassafras:hover,
+div.mid-photo-container div.plant.Spiraea:hover {
   width: 80px !important;
   height: 80px !important;
 }
 
 div.small-photo-container img.butterfly {
   opacity: 0;
+}
+div.small-photo-container div.plant span {
+  display: block;
+}
+div.small-photo-container img.butterfly {
+  opacity: 0;
+  float: left;
+}
+div.small-photo-container div.plant:hover span{
+  color: black;
+  font-size: 12px;
+}
+div.small-photo-container div.plant:hover img.butterfly {
+  opacity: 1;
+  width: 22px;
+}
+div.small-photo-container span.count {
+  padding: 7px;
+}
+div.small-photo-container div.plant:hover span.hover {
+  background: #ffffff87;
+  height: fit-content;
+}
+div.small-photo-container div.plant span.name {
+margin-top: -15px;
+margin-right: 4px;
+}
+div.small-photo-container div.plant:hover {
+  width: 70px !important;
+  height: 70px !important;
 }
