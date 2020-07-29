@@ -3,6 +3,7 @@
 //Intersperse divs with quotes from Dr. Tallamy about the importance of native species, facts from his books, plugs for his books, esp newest- Nature's Best Hope
 
 var container = document.getElementsByClassName('photo-container');
+var lesslargecontainer = document.getElementsByClassName('less-large-photo-container')
 var midcontainer = document.getElementsByClassName('mid-photo-container');
 var smallcontainer = document.getElementsByClassName('small-photo-container');
 
@@ -32,6 +33,11 @@ for (i=0;i<plants.length;i++){
     plant.style.height = plants[i].count + 'px';
     plant.classList.add('mid')
     midcontainer[0].append(plant)
+  } else if (100 <= plants[i].count && plants[i].count < 250){
+    plant.style.width = plants[i].count + 'px';
+    plant.style.height = plants[i].count + 'px';
+    plant.classList.add('less-large')
+    lesslargecontainer[0].append(plant)
   } else {
     plant.style.width = plants[i].count + 'px';
     plant.style.height = plants[i].count + 'px';
@@ -89,5 +95,22 @@ enlargelarge[0].addEventListener('click', function(){
       larges[i].classList.add('grid-large')
     }
     container[0].classList.add('grid')
+  }
+})
+
+var lesslarges = document.getElementsByClassName('less-large')
+var enlargelesslarge = document.getElementsByClassName('click-less-large')
+
+enlargelesslarge[0].addEventListener('click', function(){
+  if(lesslargecontainer[0].classList.contains('grid')){
+    for (i=0;i<lesslarges.length;i++){
+      lesslarges[i].classList.remove('grid-less-large')
+    }
+    lesslargecontainer[0].classList.remove('grid')
+  } else {
+    for (i=0;i<lesslarges.length;i++){
+      lesslarges[i].classList.add('grid-less-large')
+    }
+    lesslargecontainer[0].classList.add('grid')
   }
 })

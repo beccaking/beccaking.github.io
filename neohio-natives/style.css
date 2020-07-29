@@ -8,9 +8,11 @@ header {
   top: 0;
   background: #172709e8;
   border-bottom: 2px solid #5f2b07;
-  width: 102%;
   text-shadow: 1px 1px #1e2712;
   color: #f4a065;
+  width: 96%;
+  padding: 10px;
+  margin: 0 auto;
 }
 footer {
   background: #172709e8;
@@ -19,6 +21,8 @@ footer {
   text-shadow: 1px 1px #1e2712;
   color: #f4a065;
   padding: 10px;
+  width: 96%;
+  margin: 0 auto;
 }
 footer span {
   font-size: 14px;
@@ -43,6 +47,16 @@ div.plant {
   box-shadow: 2px 2px 1px #354e35;
   margin: 8px;
 }
+div.plant.less-large {
+  margin-top: 27px;
+}
+div.plant.less-less-large {
+  margin-top: 68px;
+}
+div.grid div.plant.less-large,
+div.grid div.plant.less-less-large {
+  margin-top: 8px;
+}
 div.small-photo-container div.plant {
   box-shadow: 1px 1px 1px #354e35;
 }
@@ -55,8 +69,9 @@ div.plant:hover {
   border: 1px solid #354e35;
 }
 
-div.photo-container {
-  width: 100%;
+div.photo-container, div.less-large-photo-container {
+  width: 96%;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -67,7 +82,8 @@ div.photo-container {
 }
 
 div.mid-photo-container {
-  width: 100%;
+  width: 96%;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -78,7 +94,8 @@ div.mid-photo-container {
 }
 
 div.small-photo-container {
-  width: 100%;
+  width: 96%;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -86,6 +103,9 @@ div.small-photo-container {
   border: 2px solid #5f2b07;
   background: #25190dd6;
   padding: 8px;
+}
+div.small-photo-container .plant {
+  margin: 25px;
 }
 
 span {
@@ -100,7 +120,7 @@ span.instruction {
   font-style: italic;
   font-size: 14px;
 }
-span.click, span.click-mid, span.click-large {
+span.click, span.click-mid, span.click-large, span.click-less-large {
   font-style: italic;
   font-size: 14px;
   height: fit-content;
@@ -110,11 +130,11 @@ span.click, span.click-mid, span.click-large {
   margin: 8px;
   margin-right: 6px;
 }
-span.click:hover, span.click-mid:hover, span.click-large:hover {
+span.click:hover, span.click-mid:hover, span.click-large:hover, span.click-less-large:hover {
   cursor: pointer;
 }
 
-div.plant.grid-large {
+div.plant.grid-large, div.plant.grid-less-large {
   width: 200px !important;
   height: 200px !important;
 }
@@ -173,51 +193,51 @@ a.more  {
 div.plant {
   color: transparent;
 }
-div.photo-container div.plant span {
+div.photo-container div.plant span, div.less-large-photo-container div.plant span {
   display: block;
 }
-div.photo-container img.butterfly {
+div.photo-container img.butterfly, div.less-large-photo-container img.butterfly {
   opacity: 0;
   float: left;
 }
-div.photo-container div.plant:hover span{
+div.photo-container div.plant:hover span, div.less-large-photo-container div.plant:hover span {
   color: black;
 }
-div.photo-container div.plant:hover img.butterfly {
+div.photo-container div.plant:hover img.butterfly, div.less-large-photo-container div.plant:hover img.butterfly {
   opacity: 1;
 }
-div.photo-container span.count {
+div.photo-container span.count, div.less-large-photo-container span.count {
   padding: 7px;
 }
-div.photo-container div.plant:hover span.hover {
+div.photo-container div.plant:hover span.hover, div.less-large-photo-container div.plant:hover span.hover {
   background: #ffffff87;
   height: 36px;
 }
-div.photo-container div.plant:hover span.name {
+div.photo-container div.plant:hover span.name, div.less-large-photo-container div.plant:hover span.name {
 float: right;
 margin-top: -44px;
 margin-right: 4px;
 }
-div.photo-container div.plant.Amelanchier:hover span.name, div.photo-container div.plant.Viburnum:hover span.name {
+div.less-large-photo-container div.plant.Amelanchier:hover span.name, div.less-large-photo-container div.plant.Viburnum:hover span.name {
   float: none;
 }
-div.photo-container div.plant.Cornus:hover span, div.photo-container div.plant.Solidago span, div.photo-container div.plant.Castanea span {
+div.less-large-photo-container div.plant.Cornus:hover span, div.less-large-photo-container div.plant.Solidago span, div.less-large-photo-container div.plant.Castanea span {
 font-size: 13px;
 }
-div.photo-container div.plant.Cornus:hover span.name, div.photo-container div.plant.Solidago span.name, div.photo-container div.plant.Castanea span.name {
+div.less-large-photo-container div.plant.Cornus:hover span.name, div.less-large-photo-container div.plant.Solidago span.name, div.less-large-photo-container div.plant.Castanea span.name {
 margin-top: -38px;
 }
-div.photo-container div.plant.Amelanchier:hover span.hover, div.photo-container div.plant.Viburnum:hover span.hover {
+div.less-large-photo-container div.plant.Amelanchier:hover span.hover, div.less-large-photo-container div.plant.Viburnum:hover span.hover {
   height:53px;
 }
 
-div.photo-container div.plant.grid-large.Amelanchier:hover span.name, div.photo-container div.plant.grid-large.Viburnum:hover span.name {
+div.less-large-photo-container div.plant.grid-less-large.Amelanchier:hover span.name, div.less-large-photo-container div.plant.grid-less-large.Viburnum:hover span.name {
   float: right;
 }
-div.photo-container div.plant.grid-large.Cornus:hover span, div.photo-container div.plant.grid-large.Solidago span, div.photo-container div.plant.grid-large.Castanea span {
+div.less-large-photo-container div.plant.grid-less-large.Cornus:hover span, div.less-large-photo-container div.plant.grid-less-large.Solidago span, div.less-large-photo-container div.plant.grid-less-large.Castanea span {
 font-size: 14px;
 }
-div.photo-container div.plant.grid-large.Amelanchier:hover span.hover, div.photo-container div.plant.grid-large.Viburnum:hover span.hover {
+div.less-large-photo-container div.plant.grid-less-large.Amelanchier:hover span.hover, div.less-large-photo-container div.plant.grid-less-large.Viburnum:hover span.hover {
   height:36px;
 }
 
