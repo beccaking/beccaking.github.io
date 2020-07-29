@@ -370,3 +370,19 @@ div.small-photo-container div.plant:hover {
   width: 70px !important;
   height: 70px !important;
 }
+
+@media only screen and (max-width: 400px){
+
+  div.information {
+    width: 325px;
+  }
+  body {
+    width: 94%;
+  }
+  div.photo-container, div.less-large-photo-container, div.mid-container, div.small-photo-container {
+    justify-content: center;
+  }
+  span.click-less-large {
+    margin: 24px;
+  }
+}
