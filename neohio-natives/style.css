@@ -1,17 +1,30 @@
 body {
   font-family: Helvetica;
-  background: #b4bc87;
+  background-image: url('./images/bark.jpg');
   color: #5f2b07;
 }
 header {
   position: sticky;
   top: 0;
-  background: #b4bc87;
+  background: #172709e8;
   border-bottom: 2px solid #5f2b07;
   width: 102%;
+  text-shadow: 1px 1px #1e2712;
+  color: #f4a065;
+}
+footer {
+  background: #172709e8;
+  border-top: 2px solid #5f2b07;
+  width: 102%;
+  text-shadow: 1px 1px #1e2712;
+  color: #f4a065;
+  padding: 10px;
+}
+footer span {
+  font-size: 14px;
 }
 a {
-  color: #5f2b07;
+  color: #f4a065;
 }
 a:hover {
   font-weight: bold;
@@ -49,7 +62,7 @@ div.photo-container {
   flex-direction: row;
   flex-wrap: wrap;
   border: 2px solid #5f2b07;
-  background: #25190d;
+  background: #25190dd6;
   padding: 8px;
 }
 
@@ -60,7 +73,7 @@ div.mid-photo-container {
   flex-direction: row;
   flex-wrap: wrap;
   border: 2px solid #5f2b07;
-  background: #25190d;
+  background: #25190dd6;
   padding: 8px;
 }
 
@@ -71,7 +84,7 @@ div.small-photo-container {
   flex-direction: row;
   flex-wrap: wrap;
   border: 2px solid #5f2b07;
-  background: #25190d;
+  background: #25190dd6;
   padding: 8px;
 }
 
