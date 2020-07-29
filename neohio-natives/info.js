@@ -8,22 +8,8 @@ for(i=0;i<plantimages.length;i++){
 
   let information = document.getElementsByClassName('information')
 
-  let close = document.createElement('span')
-  close.innerHTML = 'X'
-  close.classList.add('close')
   let currentImage = plantimages[i]
-  close.addEventListener('click', function(){
-    theinformation.classList.remove('showing')
-    currentImage.style.border = '1px solid lightgrey';
 
-    for (l=0;l<plantimages.length;l++){
-      plantimages[l].style.zIndex='0'
-    }
-
-        modal[0].style.display = 'none'
-  })
-
-  information[i].append(close)
 
     for(j=0;j<plants.length;j++){
       if(species == plants[j].species){
@@ -33,6 +19,11 @@ for(i=0;i<plantimages.length;i++){
         var url = plants[j].url
       }
     }
+
+    let close = document.createElement('span')
+    close.innerHTML = 'X'
+    close.classList.add('close')
+    information[i].append(close)
 
   let speciesname = document.createElement('span')
   speciesname.innerHTML = 'Species: <em>' + species +'</em>'
@@ -62,16 +53,44 @@ for(i=0;i<plantimages.length;i++){
   image.classList.add('thumbnail')
   information[i].append(image)
 
-  let modal = document.getElementsByClassName('modal')
+
+
   let theinformation = information[i]
 
-  plantimages[i].addEventListener('click', function(){
+  plantimages[i].addEventListener('click', function(event){
+    event.stopPropagation();
+    if(theinformation.classList.contains('showing')){
+      this.style.border = '1px solid white';
+      theinformation.classList.remove('showing')
+    } else {
+      for(j=0;j<plantimages.length;j++){
+        plantimages[j].style.border = '1px solid white';
+      }
+      for(k=0;k<information.length;k++){
+        information[k].classList.remove('showing')
+      }
       this.style.border = '3px solid white';
       theinformation.classList.add('showing')
-      for (m=0;m<plantimages.length;m++){
-        plantimages[m].style.zIndex='-10'
     }
-    modal[0].style.display = 'block'
   })
+
+  close.addEventListener('click', function(event){
+    event.stopPropagation();
+    currentImage.style.border = '1px solid white';
+    theinformation.classList.remove('showing')
+  })
+
+
+  let body = document.body
+
+//Slow as molasses
+  // body.addEventListener('click', function(){
+  //   for(j=0;j<plantimages.length;j++){
+  //     plantimages[j].style.border = '1px solid white';
+  //   }
+  //   for(k=0;k<information.length;k++){
+  //     information[k].classList.remove('showing')
+  //   }
+  // })
 
 }

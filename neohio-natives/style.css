@@ -1,8 +1,29 @@
 body {
   font-family: Helvetica;
-  background: #a1bfa1;
+  background: #b4bc87;
+  color: #5f2b07;
 }
-
+header {
+  position: sticky;
+  top: 0;
+  background: #b4bc87;
+  border-bottom: 2px solid #5f2b07;
+  width: 102%;
+}
+a {
+  color: #5f2b07;
+}
+a:hover {
+  font-weight: bold;
+}
+footer span:first-child {
+  display: block;
+  margin-top: 25px;
+}
+footer span:last-child {
+  display: block;
+  margin-top: 5px;
+}
 div.plant {
   border: 1px solid lightgrey;
   background-size: cover;
@@ -27,8 +48,8 @@ div.photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 3px solid #354e35;
-  background: #466946;
+  border: 2px solid #5f2b07;
+  background: #25190d;
   padding: 8px;
 }
 
@@ -38,8 +59,8 @@ div.mid-photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 2px solid #354e35;
-  background: #466946;
+  border: 2px solid #5f2b07;
+  background: #25190d;
   padding: 8px;
 }
 
@@ -49,8 +70,8 @@ div.small-photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid #354e35;
-  background: #466946;
+  border: 2px solid #5f2b07;
+  background: #25190d;
   padding: 8px;
 }
 
@@ -59,6 +80,8 @@ span {
 }
 span.label {
   font-size: 20px;
+  font-family: 'Rowdies', cursive;
+  font-weight: 300;
 }
 span.instruction {
   font-style: italic;
@@ -97,8 +120,8 @@ div.information {
   padding: 10px;
   padding-bottom: 0;
   height: fit-content;
-  margin: 10px auto;
-  z-index: 10;
+  border: 2px solid #364e35;
+  box-shadow: 1px 1px 1px black;
 }
 
 div.information.showing {
@@ -114,10 +137,11 @@ img.thumbnail {
 
 span.close {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 25px;
   float: right;
+  margin-right: 2px;
 }
-
+/*
 div.modal {
   display: none;
   background: #313131c7;
@@ -127,7 +151,7 @@ div.modal {
   height: 4500px;
   width: 100%;
   z-index: 0;
-}
+} */
 
 a.more  {
   float: left;
