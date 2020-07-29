@@ -156,6 +156,7 @@ div.modal {
 a.more  {
   float: left;
 }
+
 div.plant {
   color: transparent;
 }
@@ -181,7 +182,7 @@ div.photo-container div.plant:hover span.hover {
 }
 div.photo-container div.plant:hover span.name {
 float: right;
-margin-top: -29px;
+margin-top: -44px;
 margin-right: 4px;
 }
 div.photo-container div.plant.Amelanchier:hover span.name, div.photo-container div.plant.Viburnum:hover span.name {
@@ -189,6 +190,9 @@ div.photo-container div.plant.Amelanchier:hover span.name, div.photo-container d
 }
 div.photo-container div.plant.Cornus:hover span, div.photo-container div.plant.Solidago span, div.photo-container div.plant.Castanea span {
 font-size: 13px;
+}
+div.photo-container div.plant.Cornus:hover span.name, div.photo-container div.plant.Solidago span.name, div.photo-container div.plant.Castanea span.name {
+margin-top: -38px;
 }
 div.photo-container div.plant.Amelanchier:hover span.hover, div.photo-container div.plant.Viburnum:hover span.hover {
   height:53px;
@@ -204,6 +208,101 @@ div.photo-container div.plant.grid-large.Amelanchier:hover span.hover, div.photo
   height:36px;
 }
 
-div.mid-photo-container img.butterfly, div.small-photo-container img.butterfly {
+
+
+div.plant {
+  color: transparent;
+}
+div.mid-photo-container div.plant span {
+  display: block;
+}
+div.mid-photo-container img.butterfly {
+  opacity: 0;
+  float: left;
+}
+div.mid-photo-container div.plant:hover span{
+  color: black;
+  font-size: 12px;
+}
+div.mid-photo-container div.plant:hover img.butterfly {
+  opacity: 1;
+  width: 22px;
+}
+div.mid-photo-container span.count {
+  padding: 7px;
+}
+div.mid-photo-container div.plant:hover span.hover {
+  background: #ffffff87;
+  height: fit-content;
+}
+div.mid-photo-container div.plant span.name {
+margin-top: -15px;
+margin-right: 4px;
+}
+div.mid-photo-container div.plant.Spiraea:hover {
+  width: 78px !important;
+  height: 78px !important;
+}
+div.mid-photo-container div.plant.Sassafras:hover {
+  width: 56px !important;
+  height: 56px !important;
+}
+div.mid-photo-container div.plant.Nyssa:hover {
+  width: 54px !important;
+  height: 54px !important;
+}
+div.mid-photo-container div.plant.Gaylussacia:hover {
+  width: 64px !important;
+  height: 64px !important;
+}
+div.mid-photo-container div.plant.Sambucus:hover {
+  width: 58px !important;
+  height: 58px !important;
+}
+div.mid-photo-container div.plant.Physocarpus:hover {
+  width: 51px !important;
+  height: 51px !important;
+}
+div.mid-photo-container div.plant.Gleditsia:hover {
+  width: 65px !important;
+  height: 65px !important;
+}
+div.mid-photo-container div.plant.Aesculus:hover {
+  width: 79px !important;
+  height: 79px !important;
+}
+div.mid-photo-container div.plant.Ilex:hover {
+  width: 47px !important;
+  height: 47px !important;
+}
+div.mid-photo-container div.plant.Eupatorium:hover {
+  width: 53px !important;
+  height: 53px !important;
+}
+div.mid-photo-container div.plant.Platanus:hover {
+  width: 55px !important;
+  height: 55px !important;
+}
+div.mid-photo-container div.plant.Ceanothus:hover {
+  width: 61px !important;
+  height: 61px !important;
+}
+div.mid-photo-container.grid div.plant.Ceanothus:hover,
+div.mid-photo-container.grid div.plant.Platanus:hover,
+div.mid-photo-container.grid div.plant.Eupatorium:hover,
+div.mid-photo-container.grid div.plant.Ilex:hover,
+div.mid-photo-container.grid div.plant.Aesculus:hover,
+div.mid-photo-container.grid div.plant.Gleditsia:hover,
+div.mid-photo-container.grid div.plant.Physocarpus:hover,
+div.mid-photo-container.grid div.plant.Sambucus:hover,
+div.mid-photo-container.grid div.plant.Gaylussacia:hover,
+div.mid-photo-container.grid div.plant.Nyssa:hover,
+div.mid-photo-container.grid div.plant.Sassafras:hover,
+div.mid-photo-container.grid div.plant.Spiraea:hover {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+div.small-photo-container img.butterfly {
   opacity: 0;
 }
