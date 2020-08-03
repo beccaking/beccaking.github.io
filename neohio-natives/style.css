@@ -70,7 +70,7 @@ span.info {
   color: white;
   padding: 7px;
   font-size: 14px;
-  text-decoration: underline;
+  font-style: italic;
 }
 div.proportionate {
   display: none;
@@ -320,13 +320,19 @@ div.small-photo-container div.plant {
   body {
     width: 94%;
   }
-  div.photo-container, div.less-large-photo-container, div.mid-container, div.small-photo-container {
+  div.photo-container, div.mid-container, div.small-photo-container {
     justify-content: center;
-  }
-  span.click-less-large {
-    margin: 24px;
   }
   header {
     height: 168px;
+  }
+  div.plant.large {
+    margin: 10px;
+  }
+  div.plant.mid {
+    margin: 8px;
+  }
+  div.plant.small {
+    margin: 6px;
   }
 }
