@@ -13,6 +13,7 @@ header {
   width: 96%;
   padding: 10px;
   margin: 0 auto;
+  height: 118px;
 }
 footer {
   background: #172709e8;
@@ -47,15 +48,11 @@ div.plant {
   box-shadow: 2px 2px 1px #354e35;
   margin: 8px;
 }
-div.plant.less-large {
-  margin-top: 27px;
+div.plant.large {
+  margin: 29px;
 }
-div.plant.less-less-large {
-  margin-top: 68px;
-}
-div.grid div.plant.less-large,
-div.grid div.plant.less-less-large {
-  margin-top: 8px;
+div.plant.mid {
+  margin: 13px;
 }
 div.small-photo-container div.plant {
   box-shadow: 1px 1px 1px #354e35;
@@ -68,8 +65,26 @@ div.plant:hover {
   box-shadow: 1px 1px 1px white;
   border: 1px solid #354e35;
 }
-
-div.photo-container, div.less-large-photo-container {
+span.info {
+  width: 100%;
+  color: white;
+  padding: 7px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+div.proportionate {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+}
+div.proportionate-plant {
+  border-radius: 100%;
+  border: 1px solid lightgrey;
+  background-size: cover;
+  box-shadow: 2px 2px 1px #354e35;
+  margin: 8px;
+}
+div.photo-container {
   width: 96%;
   margin: 0 auto;
   height: 100%;
@@ -79,6 +94,8 @@ div.photo-container, div.less-large-photo-container {
   border: 2px solid #5f2b07;
   background: #25190dd6;
   padding: 8px;
+  margin-bottom: -18px;
+  justify-content: center;
 }
 
 div.mid-photo-container {
@@ -91,6 +108,7 @@ div.mid-photo-container {
   border: 2px solid #5f2b07;
   background: #25190dd6;
   padding: 8px;
+  justify-content: center;
 }
 
 div.small-photo-container {
@@ -103,9 +121,7 @@ div.small-photo-container {
   border: 2px solid #5f2b07;
   background: #25190dd6;
   padding: 8px;
-}
-div.small-photo-container .plant {
-  margin: 25px;
+  justify-content: center;
 }
 
 span {
@@ -120,31 +136,27 @@ span.instruction {
   font-style: italic;
   font-size: 14px;
 }
-span.click, span.click-mid, span.click-large, span.click-less-large {
-  font-style: italic;
+span.click {
   font-size: 14px;
+  color: white;
   height: fit-content;
-  background: #708871;
+  width: fit-content;
+  background: #271d10;
   padding: 10px;
-  border: 1px solid white;
-  margin: 8px;
-  margin-right: 6px;
+  border: 1px solid #5f2c07;
+  box-shadow: 1px 1px 1px #1f1e1e;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 13px;
 }
-span.click:hover, span.click-mid:hover, span.click-large:hover, span.click-less-large:hover {
+span.click:hover {
   cursor: pointer;
 }
 
-div.plant.grid-large, div.plant.grid-less-large {
-  width: 200px !important;
-  height: 200px !important;
-}
-div.plant.grid-mid {
-  width: 80px !important;
-  height: 80px !important;
-}
-div.plant.grid-small {
-  width: 40px !important;
-  height: 40px !important;
+div.plant.grid-large {
+  width: 300px;
+  height: 300px;
 }
 
 div.information {
@@ -174,18 +186,6 @@ span.close {
   float: right;
   margin-right: 2px;
 }
-/*
-div.modal {
-  display: none;
-  background: #313131c7;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4500px;
-  width: 100%;
-  z-index: 0;
-} */
-
 a.more  {
   float: left;
 }
@@ -272,69 +272,10 @@ div.mid-photo-container div.plant span.name {
 margin-top: -15px;
 margin-right: 4px;
 }
-/* div.mid-photo-container div.plant.Spiraea:hover {
-  width: 78px !important;
-  height: 78px !important;
-}
-div.mid-photo-container div.plant.Sassafras:hover {
-  width: 56px !important;
-  height: 56px !important;
-}
-div.mid-photo-container div.plant.Nyssa:hover {
-  width: 54px !important;
-  height: 54px !important;
-}
-div.mid-photo-container div.plant.Gaylussacia:hover {
-  width: 64px !important;
-  height: 64px !important;
-}
-div.mid-photo-container div.plant.Sambucus:hover {
-  width: 58px !important;
-  height: 58px !important;
-}
-div.mid-photo-container div.plant.Physocarpus:hover {
-  width: 51px !important;
-  height: 51px !important;
-}
-div.mid-photo-container div.plant.Gleditsia:hover {
-  width: 65px !important;
-  height: 65px !important;
-}
-div.mid-photo-container div.plant.Aesculus:hover {
-  width: 79px !important;
-  height: 79px !important;
-}
-div.mid-photo-container div.plant.Ilex:hover {
-  width: 47px !important;
-  height: 47px !important;
-}
-div.mid-photo-container div.plant.Eupatorium:hover {
-  width: 53px !important;
-  height: 53px !important;
-}
-div.mid-photo-container div.plant.Platanus:hover {
-  width: 55px !important;
-  height: 55px !important;
-}
-div.mid-photo-container div.plant.Ceanothus:hover {
-  width: 61px !important;
-  height: 61px !important;
-} */
 
-div.mid-photo-container div.plant.Ceanothus:hover,
-div.mid-photo-container div.plant.Platanus:hover,
-div.mid-photo-container div.plant.Eupatorium:hover,
-div.mid-photo-container div.plant.Ilex:hover,
-div.mid-photo-container div.plant.Aesculus:hover,
-div.mid-photo-container div.plant.Gleditsia:hover,
-div.mid-photo-container div.plant.Physocarpus:hover,
-div.mid-photo-container div.plant.Sambucus:hover,
-div.mid-photo-container div.plant.Gaylussacia:hover,
-div.mid-photo-container div.plant.Nyssa:hover,
-div.mid-photo-container div.plant.Sassafras:hover,
-div.mid-photo-container div.plant.Spiraea:hover {
-  width: 80px !important;
-  height: 80px !important;
+div.mid-photo-container div.plant {
+  width: 150px !important;
+  height: 150px !important;
 }
 
 div.small-photo-container img.butterfly {
@@ -366,7 +307,7 @@ div.small-photo-container div.plant span.name {
 margin-top: -15px;
 margin-right: 4px;
 }
-div.small-photo-container div.plant:hover {
+div.small-photo-container div.plant {
   width: 70px !important;
   height: 70px !important;
 }
@@ -384,5 +325,8 @@ div.small-photo-container div.plant:hover {
   }
   span.click-less-large {
     margin: 24px;
+  }
+  header {
+    height: 168px;
   }
 }
