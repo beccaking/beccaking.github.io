@@ -16,10 +16,6 @@ for (i=0;i<plants.length;i++){
 }
 
 for (i=0;i<plants.length;i++){
-  var genus = plants[i].genus
-  var names = plants[i].name
-  var count = plants[i].count
-  var url = plants[i].url
 
   let plant = document.createElement('div')
   plant.classList.add('plant')

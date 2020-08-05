@@ -10,6 +10,16 @@ for(i=0;i<plantimages.length;i++){
 
   let currentImage = plantimages[i]
 
+
+    for(j=0;j<plants.length;j++){
+      if(species == plants[j].species){
+        var genus = plants[j].genus
+        var names = plants[j].name
+        var count = plants[j].count
+        var url = plants[j].url
+      }
+    }
+
     let close = document.createElement('span')
     close.innerHTML = 'X'
     close.classList.add('close')
@@ -72,3 +82,15 @@ for(i=0;i<plantimages.length;i++){
 
 
   let body = document.body
+
+//Slow as molasses
+  // body.addEventListener('click', function(){
+  //   for(j=0;j<plantimages.length;j++){
+  //     plantimages[j].style.border = '1px solid white';
+  //   }
+  //   for(k=0;k<information.length;k++){
+  //     information[k].classList.remove('showing')
+  //   }
+  // })
+
+}
