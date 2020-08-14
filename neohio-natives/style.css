@@ -329,9 +329,13 @@ body.grid div.small-photo-container div.plant {
   }
   body {
     width: 94%;
+    margin: 0 auto;
   }
-  div.photo-container, div.mid-container, div.small-photo-container {
+  div.photo-container, div.mid-container, div.mid-photo-container, div.small-photo-container {
     justify-content: center;
+    border: 0px;
+    border-top: 2px solid #5f2b07;
+    border-bottom: 2px solid #5f2b07;
   }
   header {
     height: 168px;
