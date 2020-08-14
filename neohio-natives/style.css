@@ -327,7 +327,9 @@ body.grid div.small-photo-container div.plant {
   div.information {
     width: 325px;
   }
-
+  body {
+    width: 94%;
+  }
   div.photo-container, div.mid-container, div.small-photo-container {
     justify-content: center;
   }
