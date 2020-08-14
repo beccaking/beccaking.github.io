@@ -1,7 +1,11 @@
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: Helvetica;
   background-image: url('./images/bark.jpg');
   color: #5f2b07;
+  width: 100%;
   overflow-x: hidden;
 }
 header {
