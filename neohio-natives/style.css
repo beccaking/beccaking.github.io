@@ -225,7 +225,10 @@ div.plant {
 }
 body.proportionate-body div.mid-photo-container div.plant span.hover {
   width: 75px;
-  height: 75px;
+  height: fit-content;
+}
+body.proportionate-body div.mid-photo-container div.plant:hover span.hover {
+border: 1px solid white;
 }
 div.mid-photo-container div.plant span{
   display: block;
@@ -288,6 +291,9 @@ div.small-photo-container div.plant:hover span.hover {
   height: fit-content;
   width: 70px;
   display: block;
+}
+body.proportionate-body div.small-photo-container div.plant:hover span.hover {
+    border: 1px solid white;
 }
 div.small-photo-container div.plant span.name {
 margin-top: -15px;
