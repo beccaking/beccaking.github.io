@@ -2,6 +2,7 @@ body {
   font-family: Helvetica;
   background-image: url('./images/bark.jpg');
   color: #5f2b07;
+  overflow-x: hidden;
 }
 header {
   position: sticky;
@@ -71,6 +72,19 @@ span.info {
   padding: 7px;
   font-size: 14px;
   font-style: italic;
+}
+body.proportionate-body div.Solidago span.hover span.name, body.proportionate-body div.Solidago span.hover span.count, body.proportionate-body div.Viburnum span.hover span.name, body.proportionate-body div.Viburnum span.hover span.count  {
+    font-size: 14px;
+    height: 31px;
+}
+
+body.proportionate-body div.Amelanchier span.hover span.name, body.proportionate-body div.Amelanchier span.hover span.count, body.proportionate-body div.Cornus span.hover span.name, body.proportionate-body div.Cornus span.hover span.count {
+  font-size: 14px;
+  height: 31px;
+}
+body.proportionate-body div.Castanea span.hover span.name, body.proportionate-body div.Castanea span.hover span.count, body.proportionate-body div.Cornus span.hover span.name, body.proportionate-body div.Cornus span.hover span.count {
+  font-size: 14px;
+  height: 31px;
 }
 div.proportionate {
   display: none;
