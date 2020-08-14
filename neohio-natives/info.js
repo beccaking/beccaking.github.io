@@ -20,6 +20,7 @@ for(i=0;i<plantimages.length;i++){
       }
     }
 
+
     let close = document.createElement('span')
     close.innerHTML = 'X'
     close.classList.add('close')

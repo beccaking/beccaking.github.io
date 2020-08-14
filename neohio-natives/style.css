@@ -154,9 +154,9 @@ span.click:hover {
   cursor: pointer;
 }
 
-div.plant.grid-large {
-  width: 300px;
-  height: 300px;
+body.grid div.plant.large {
+  width: 300px !important;
+  height: 300px !important;
 }
 
 div.information {
@@ -218,35 +218,16 @@ float: right;
 margin-top: -44px;
 margin-right: 4px;
 }
-div.less-large-photo-container div.plant.Amelanchier:hover span.name, div.less-large-photo-container div.plant.Viburnum:hover span.name {
-  float: none;
-}
-div.less-large-photo-container div.plant.Cornus:hover span, div.less-large-photo-container div.plant.Solidago span, div.less-large-photo-container div.plant.Castanea span {
-font-size: 13px;
-}
-div.less-large-photo-container div.plant.Cornus:hover span.name, div.less-large-photo-container div.plant.Solidago span.name, div.less-large-photo-container div.plant.Castanea span.name {
-margin-top: -38px;
-}
-div.less-large-photo-container div.plant.Amelanchier:hover span.hover, div.less-large-photo-container div.plant.Viburnum:hover span.hover {
-  height:53px;
-}
-
-div.less-large-photo-container div.plant.grid-less-large.Amelanchier:hover span.name, div.less-large-photo-container div.plant.grid-less-large.Viburnum:hover span.name {
-  float: right;
-}
-div.less-large-photo-container div.plant.grid-less-large.Cornus:hover span, div.less-large-photo-container div.plant.grid-less-large.Solidago span, div.less-large-photo-container div.plant.grid-less-large.Castanea span {
-font-size: 14px;
-}
-div.less-large-photo-container div.plant.grid-less-large.Amelanchier:hover span.hover, div.less-large-photo-container div.plant.grid-less-large.Viburnum:hover span.hover {
-  height:36px;
-}
-
 
 
 div.plant {
   color: transparent;
 }
-div.mid-photo-container div.plant span {
+body.proportionate-body div.mid-photo-container div.plant span.hover {
+  width: 75px;
+  height: 75px;
+}
+div.mid-photo-container div.plant span{
   display: block;
 }
 div.mid-photo-container img.butterfly {
@@ -271,18 +252,19 @@ div.mid-photo-container div.plant:hover span.hover {
 div.mid-photo-container div.plant span.name {
 margin-top: -15px;
 margin-right: 4px;
+display: none;
+}
+div.mid-photo-container div.plant:hover span.name {
+  display: block;
 }
 
-div.mid-photo-container div.plant {
+body.grid div.mid-photo-container div.plant {
   width: 150px !important;
   height: 150px !important;
 }
 
 div.small-photo-container img.butterfly {
   opacity: 0;
-}
-div.small-photo-container div.plant span {
-  display: block;
 }
 div.small-photo-container img.butterfly {
   opacity: 0;
@@ -291,6 +273,8 @@ div.small-photo-container img.butterfly {
 div.small-photo-container div.plant:hover span{
   color: black;
   font-size: 12px;
+  width: 150px;
+  height: 150px;
 }
 div.small-photo-container div.plant:hover img.butterfly {
   opacity: 1;
@@ -302,12 +286,14 @@ div.small-photo-container span.count {
 div.small-photo-container div.plant:hover span.hover {
   background: #ffffff87;
   height: fit-content;
+  width: 70px;
+  display: block;
 }
 div.small-photo-container div.plant span.name {
 margin-top: -15px;
 margin-right: 4px;
 }
-div.small-photo-container div.plant {
+body.grid div.small-photo-container div.plant {
   width: 70px !important;
   height: 70px !important;
 }
