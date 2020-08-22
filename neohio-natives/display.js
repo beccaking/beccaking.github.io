@@ -38,18 +38,16 @@ for (i=0;i<plants.length;i++){
   }
 }
 
-var toggle = document.getElementsByClassName('click')
+var proportionview = document.getElementsByClassName('click-proportion')
+var gridview = document.getElementsByClassName('click-grid')
 var body = document.getElementsByTagName('body')
 
-toggle[0].addEventListener('click', function(){
- if(body[0].classList.contains('proportionate-body')){
-   body[0].classList.remove('proportionate-body')
-   body[0].classList.add('grid')
- } else {
-  body[0].classList.add('proportionate-body')
-  body[0].classList.remove('grid')
-  }
+proportionview[0].addEventListener('click', function(){
+   body[0].classList.add('proportionate-body')
+   body[0].classList.remove('grid')
+ })
 
-
-
-})
+  gridview[0].addEventListener('click', function(){
+     body[0].classList.remove('proportionate-body')
+     body[0].classList.add('grid')
+   })

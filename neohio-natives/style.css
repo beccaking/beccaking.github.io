@@ -6,19 +6,23 @@ body {
   background-image: url('./images/bark.jpg');
   color: #5f2b07;
   width: 100%;
+  margin: 0;
   overflow-x: hidden;
 }
 header {
   position: sticky;
   top: 0;
   background: #172709e8;
-  border-bottom: 2px solid #5f2b07;
+  border-bottom: 2px solid #ad9e59;
   text-shadow: 1px 1px #1e2712;
-  color: #f4a065;
+  color: #ad9e59;
   width: 96%;
   padding: 10px;
   margin: 0 auto;
   height: 118px;
+}
+header a {
+  color: #ad9e59;
 }
 footer {
   background: #172709e8;
@@ -35,9 +39,8 @@ footer span {
 }
 a {
   color: #f4a065;
-}
-a:hover {
-  font-weight: bold;
+  text-decoration: none;
+  font-style: italic;
 }
 footer span:first-child {
   display: block;
@@ -72,7 +75,7 @@ div.plant:hover {
 }
 span.info {
   width: 100%;
-  color: white;
+  color: #ad9e59;
   padding: 7px;
   font-size: 14px;
   font-style: italic;
@@ -109,7 +112,7 @@ div.photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 2px solid #5f2b07;
+  border-top: 2px solid #ad9e59;
   background: #25190dd6;
   padding: 8px;
   margin-bottom: -18px;
@@ -123,7 +126,7 @@ div.mid-photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 2px solid #5f2b07;
+  border-top: 2px solid #ad9e59;
   background: #25190dd6;
   padding: 8px;
   justify-content: center;
@@ -136,7 +139,6 @@ div.small-photo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 2px solid #5f2b07;
   background: #25190dd6;
   padding: 8px;
   justify-content: center;
@@ -146,7 +148,7 @@ span {
   font-size: 16px;
 }
 span.label {
-  font-size: 20px;
+  font-size: 29px;
   font-family: 'Rowdies', cursive;
   font-weight: 300;
 }
@@ -156,17 +158,21 @@ span.instruction {
 }
 span.click {
   font-size: 14px;
-  color: white;
+  color: #ad9e59;
   height: fit-content;
   width: fit-content;
   background: #271d10;
   padding: 10px;
-  border: 1px solid #5f2c07;
-  box-shadow: 1px 1px 1px #1f1e1e;
+  border-radius: 5px;
   display: block;
   text-align: center;
   margin: 0 auto;
   margin-top: 13px;
+}
+div.view-changer {
+  display: inline-flex;
+margin: 0 auto;
+width: 225px;
 }
 span.click:hover {
   cursor: pointer;
@@ -178,14 +184,12 @@ body.grid div.plant.large {
 }
 
 div.information {
-  background: #ffffff;
+  background: #ad9e59;
   display: none;
   padding: 10px;
   padding-bottom: 0;
   height: fit-content;
-  border: 2px solid #364e35;
-  box-shadow: 1px 1px 1px black;
-  right: 25%;
+  border: 1px solid #261b0f;
     top: 15%;
     position: fixed;
 }
@@ -338,7 +342,6 @@ body.grid div.small-photo-container div.plant {
     justify-content: center;
     border: 0px;
     border-top: 2px solid #5f2b07;
-    border-bottom: 2px solid #5f2b07;
   }
   header {
     height: 168px;

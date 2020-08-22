@@ -45,9 +45,9 @@ for(i=0;i<plantimages.length;i++){
   number.innerHTML = '<br>Supports ' + count + ' species of moths and butterflies<br>'
   information[i].append(number)
 
-  let moreinfo = document.createElement('span')
-  moreinfo.innerHTML = '<br><a class="more" href="' + url + '">Click here for more information</a>'
-  information[i].append(moreinfo)
+  // let moreinfo = document.createElement('span')
+  // moreinfo.innerHTML = '<br><a class="more" href="' + url + '">Click here for more information</a>'
+  // information[i].append(moreinfo)
 
   let image = document.createElement('img')
   image.setAttribute('src', './images/'+species + '.jpeg')
