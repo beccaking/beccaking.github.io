@@ -26,20 +26,21 @@ for(i=0;i<plantimages.length;i++){
     close.classList.add('close')
     information[i].append(close)
 
+
+      for(k=0;k<names.length;k++){
+        let commonname = document.createElement('span')
+        commonname.innerHTML = 'Name(s):<br>' + names[k] + '<br>'
+        information[i].append(commonname)
+      }
+
   let speciesname = document.createElement('span')
-  speciesname.innerHTML = 'Species: <em>' + species +'</em>'
+  speciesname.innerHTML = '(<em>' + species + '</em> '
 
   information[i].append(speciesname)
 
   let genusname = document.createElement('span')
-  genusname.innerHTML = '<br>Genus: <em>' + genus + '</em><br> <br>Common Name(s):<br>'
+  genusname.innerHTML = '<em>' + genus + '</em>)<br>'
   information[i].append(genusname)
-
-  for(k=0;k<names.length;k++){
-    let commonname = document.createElement('span')
-    commonname.innerHTML = names[k] + '<br>'
-    information[i].append(commonname)
-  }
 
   let number = document.createElement('span')
   number.innerHTML = '<br>Supports ' + count + ' species of moths and butterflies<br>'
