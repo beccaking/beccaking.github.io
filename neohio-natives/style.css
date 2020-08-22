@@ -185,6 +185,9 @@ div.information {
   height: fit-content;
   border: 2px solid #364e35;
   box-shadow: 1px 1px 1px black;
+  right: 25%;
+    top: 15%;
+    position: fixed;
 }
 
 div.information.showing {
