@@ -13,16 +13,16 @@ header {
   position: sticky;
   top: 0;
   background: #172709e8;
-  border-bottom: 2px solid #ad9e59;
+  border-bottom: 2px solid #415e22e6;
   text-shadow: 1px 1px #1e2712;
-  color: #ad9e59;
+  color: #415e22e6;
   width: 96%;
   padding: 10px;
   margin: 0 auto;
   height: 118px;
 }
 header a {
-  color: #ad9e59;
+  color: #7c8454;
 }
 footer {
   background: #172709e8;
@@ -184,7 +184,7 @@ body.grid div.plant.large {
 }
 
 div.information {
-  background: #ad9e59;
+  background: #778051;
   display: none;
   padding: 10px;
   padding-bottom: 0;
