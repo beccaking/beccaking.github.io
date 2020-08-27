@@ -7,13 +7,13 @@ var midcontainer = document.getElementsByClassName('mid-photo-container');
 var smallcontainer = document.getElementsByClassName('small-photo-container');
 
 
-for (i=0;i<plants.length;i++){
-  let randomIndex = Math.floor(Math.random()*i)
-  let value1 = plants[i]
-  let value2 = plants[randomIndex]
-  plants[i] = value2
-  plants[randomIndex] = value1
-}
+// for (i=0;i<plants.length;i++){
+//   let randomIndex = Math.floor(Math.random()*i)
+//   let value1 = plants[i]
+//   let value2 = plants[randomIndex]
+//   plants[i] = value2
+//   plants[randomIndex] = value1
+// }
 
 for (i=0;i<plants.length;i++){
 
