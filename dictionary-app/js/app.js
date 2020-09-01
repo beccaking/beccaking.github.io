@@ -34,15 +34,19 @@ $(() => {
           }
           const $definitionText = $('<div>').addClass('definition-text');
           $definition.append($definitionText);
-          $definitionText.text(truncate(data[0].shortdef[0],25));
+          $definitionText.text(truncate(data[0].shortdef[0],10));
           //attach the first definition to each card
 
+          const $pagination = $('<div>').addClass('pagination')
+          $definition.append($pagination)
+
           if (data[0].shortdef.length > 1){
-            const $previous = $('<div>').addClass('carousel-button').addClass('previous').text('<');
-            $definition.append($previous)
+
+            const $previous = $('<div>').addClass('carousel-button').addClass('previous').text('Previous');
+            $pagination.append($previous)
             //add previous button
-            const $next = $('<div>').addClass('carousel-button').addClass('next').text('>');
-            $definition.append($next);
+            const $next = $('<div>').addClass('carousel-button').addClass('next').text('Next');
+            $pagination.append($next);
             //add next button
             let index = 0;
             $next.on('click', () => {
@@ -51,7 +55,7 @@ $(() => {
             } else if (index === data[0].shortdef.length -1){
               index = 0;
             }
-            $definitionText.text(truncate(data[0].shortdef[index],25))
+            $definitionText.text(truncate(data[0].shortdef[index],10))
             });
           //when next button is clicked, cycle through definitions
           $previous.on('click', () => {
@@ -60,17 +64,18 @@ $(() => {
             } else if (index === 0){
               index = data[0].shortdef.length - 1;
             }
-            $definitionText.text(truncate(data[0].shortdef[index],25))
+            $definitionText.text(truncate(data[0].shortdef[index],10))
           });
           //when previous button is clicked, cycle through definitions
 }
-          $audio.attr('controls','');
-          //add play button, user interface for audio
+
 
 for (let j=0; j < data[0].hwi.prs.length; j++)
 {
     if (data[0].hwi.prs[j].sound)
     {
+      $audio.attr('controls','');
+      //add play button, user interface for audio
           let subdirectory = data[0].hwi.prs[j].sound.audio.charAt(0);
           if (data[0].hwi.prs[j].sound.audio.startsWith("bix")){
             subdirectory = "bix";
