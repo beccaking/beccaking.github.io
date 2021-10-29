@@ -65,7 +65,7 @@ footer {
 }
 #footer-bio a:hover {
   color: white;
-  filter: brightness(30%);
+  filter: brightness(60%);
 }
 footer #footer-bio img {
   width: 7%;
