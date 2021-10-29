@@ -1,1 +1,1 @@
-console.log('connected')
+console.log('Welcome to RebeccaKing.info!')
