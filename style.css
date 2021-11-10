@@ -6,6 +6,7 @@ body {
 header {
   padding: 6%;
   border-bottom: 1px solid #b5b3af;
+  background-image: url('./images/background.jpeg');
 }
 a:hover img {
   cursor: pointer;
