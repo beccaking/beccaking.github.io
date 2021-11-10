@@ -84,26 +84,21 @@ footer {
 }
 #footer-bio a {
   color: whitesmoke;
-  background: #0a0a0a;
   display: flex;
   align-items: center;
-  padding: 1%;
-  margin: 2%;
-  border-radius: 9px;
   text-decoration: none;
   width: fit-content;
-}
-#footer-bio a:hover {
-  color: white;
-  filter: brightness(60%);
 }
 footer #footer-bio img {
   width: 7%;
 }
-footer span {
+#footer-bio span:first-of-type {
   padding: 1px;
-  margin-left: 2%;
   font-size: 20px;
+}
+#footer-bio span:last-of-type {
+  margin-top: 16px;
+  display: inline-block;
 }
 @media only screen and (max-width: 750px){
   .half-width {
