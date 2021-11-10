@@ -106,8 +106,32 @@ footer span {
   .half-width {
     width: 75%;
   }
+  img {
+    width: 100%;
+  }
+  .square.one {
+    background: linear-gradient(45deg, black, #bfbfbf);
+  }
+  .square.two ul,
+  .square.three ul {
+    margin: 5% auto;
+    padding: 0;
+  }
+  .square.two a,
+  .square.three a {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #Amerimark,
+  #NCM,
+  #GA {
+    width: 90%;
+  }
   #footer-bio {
     width: 100%;
     font-size: 88%;
+  }
+  footer img.headshot {
+    width: 29%;
   }
 }
