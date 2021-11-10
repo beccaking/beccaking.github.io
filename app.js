@@ -1,1 +1,3 @@
-console.log('Welcome to RebeccaKing.info!')
+$(function(){
+  $('.backdrop').fadeOut();
+})
