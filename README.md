@@ -1,2 +1,2 @@
-# rebeccaking.info
+rebeccaking.info
 Online portfolio and side projects
