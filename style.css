@@ -11,6 +11,13 @@ header {
   border-bottom: 1px solid #b5b3af;
   background-image: url('./images/background.jpeg');
 }
+h3 {
+  width: fit-content;
+}
+.float {
+  float: right;
+  width: 85%;
+}
 a:hover img {
   cursor: pointer;
 }
@@ -23,18 +30,30 @@ ul li {
   list-style-type: none;
   margin: 4% 1%;
 }
+#GA ul,
+#Amerimark ul,
+#NCM ul {
+  width: 100%;
+  padding: 0;
+}
+#Amerimark ul li {
+  margin: 0;
+}
+#GA ul li a {
+  width: 100%;
+  margin: 10% 0;
+}
 .square {
   display: flex;
   border-bottom: 1px solid #b5b3af;
+  padding-bottom: 6%;
 }
 .square.one {
   background: linear-gradient(45deg, black, white);
 }
-.square.one a {
-  width: auto;
-}
 .square.two {
   background: #222122;
+  padding-bottom: 10%;
 }
 .square.three {
   background: linear-gradient(45deg, black, #7c7c7c);
@@ -47,7 +66,13 @@ ul li {
   text-align: left;
   color: whitesmoke;
   text-decoration: none;
-  width: 50%;
+  width: 100%;
+}
+.square.two #NCM a {
+  width: 100%;
+}
+.square.two #Freelance img {
+  width: 100%;
 }
 .half-width {
   width: 50%;
@@ -55,18 +80,84 @@ ul li {
 .full-width {
   width: 100%;
 }
-#Amerimark,
 #NCM,
-#GA {
+#Freelance {
   width: 100%;
   padding: 3% 6%;
   padding-bottom: 0;
 }
-#Amerimark {
-  width: 15%;
+#Amerimark,
+#GA,
+#AthensNews {
+  padding: 3% 6%;
+  padding-bottom: 0;
 }
-.container {
+#GA.column.left {
+  width: 80%;
+}
+.column.left {
+  width: 40%;
+}
+.column.right {
   display: flex;
+  flex-direction: column;
+}
+.column.right a img {
+  width: 100%;
+}
+#WeWriteBlogPosts {
+  width: 88%;
+  margin-top: 6%;
+}
+#WeWriteBlogPosts a img {
+  margin-top: 4%;
+}
+.media {
+  display: flex;
+  align-items: center;
+  margin-left: -47px;
+  margin-top: 14%;
+}
+.media div {
+  display: none;
+}
+.media div.active {
+  display: block;
+}
+.media video, .media img {
+  width: 100%;
+}
+.media div {
+  width: 275px;
+}
+.arrow {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
+  background: #8b8b8b;
+  border-radius: 50%;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid whitesmoke;
+}
+.arrow:hover {
+  cursor: pointer;
+  background: #040404;
+}
+#AthensNews .subsquare {
+  display: flex;
+}
+.inner-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 1%;
+}
+.square #AthensNews .inner-column a {
+  width: 100%;
 }
 footer img {
   width: 21%;
@@ -83,11 +174,13 @@ footer {
   padding: 7%;
 }
 #footer-bio a {
-  color: whitesmoke;
+  color: #b5b3af;
   display: flex;
   align-items: center;
-  text-decoration: none;
   width: fit-content;
+  padding: 1% 0;
+  text-decoration: none;
+  font-style: italic;
 }
 footer #footer-bio img {
   width: 7%;
@@ -99,16 +192,7 @@ footer #footer-bio img {
 #footer-bio span:last-of-type {
   margin-top: 16px;
   display: inline-block;
-}
-.backdrop {
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0.7;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
+  line-height: 31px;
 }
 @media only screen and (max-width: 750px){
   .half-width {
@@ -117,29 +201,84 @@ footer #footer-bio img {
   img {
     width: 100%;
   }
+  #Amerimark ul:first-child {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    height: 200px;
+  }
+  ul li {
+    margin: 0;
+  }
+  .square.two ul li {
+    margin: 10% 0;
+  }
+  .media {
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 10%;
+  }
+  .square {
+    flex-direction: column;
+    align-items: center;
+  }
+  .float {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .column.right {
+    align-items: center;
+  }
   .square.one {
     background: linear-gradient(45deg, black, #bfbfbf);
+    padding-bottom: 24%;
+  }
+  .square.one video {
+    margin: 5%;
   }
   .square.two ul,
   .square.three ul {
     margin: 5% auto;
     padding: 0;
   }
-  .square.two a,
-  .square.three a {
+  .square.two a{
     width: 100%;
     margin: 0 auto;
   }
+  .square.three a {
+    width: 100%;
+    margin: 2% auto;
+  }
   #Amerimark,
   #NCM,
-  #GA {
+  #GA.column.left,
+  #Freelance {
     width: 90%;
   }
-  #footer-bio {
-    width: 100%;
-    font-size: 88%;
+  #AthensNews .subsquare {
+    flex-direction: column;
+    align-items: center;
   }
-  footer img.headshot {
-    width: 29%;
+  #WeWriteBlogPosts {
+    margin-top: 9%;
+  }
+  .inner-column {
+    width: 100%;
+  }
+  #footer-bio {
+    width: 85%;
+    font-size: 88%;
+    padding-bottom: 22%;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer img#headshot {
+    width: 85%;
+    margin-left: 0;
+    margin-bottom: -10%;
   }
 }
