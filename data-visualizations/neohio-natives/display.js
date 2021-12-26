@@ -21,6 +21,7 @@ for (i=0;i<plants.length;i++){
   plant.classList.add('plant')
   plant.classList.add(plants[i].species)
   plant.setAttribute('id', plants[i].species)
+  plant.setAttribute('tabindex', '0')
 
   plant.style.backgroundImage = "url('./images/" + plants[i].species +".jpeg')"
   plant.style.width = plants[i].count + 'px';

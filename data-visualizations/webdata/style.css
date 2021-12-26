@@ -1,0 +1,17 @@
+body {
+  background: #080808;
+  color: whitesmoke;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.caption {
+  text-align: center;
+}
+.image-container img {
+  margin: 0 auto;
+}

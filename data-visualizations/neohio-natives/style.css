@@ -56,6 +56,9 @@ div.plant {
   box-shadow: 2px 2px 1px #354e35;
   margin: 8px;
 }
+div.plant:hover {
+  cursor: pointer;
+}
 div.plant.large {
   margin: 29px;
 }
@@ -69,7 +72,8 @@ div.mid-photo-container div.plant {
   box-shadow: 1px 1px 1px #354e35;
 }
 
-div.plant:hover {
+div.plant:hover,
+div.plant:focus {
   box-shadow: 1px 1px 1px white;
   border: 1px solid #354e35;
 }
@@ -225,20 +229,24 @@ div.photo-container img.butterfly, div.less-large-photo-container img.butterfly 
   opacity: 0;
   float: left;
 }
-div.photo-container div.plant:hover span, div.less-large-photo-container div.plant:hover span {
+div.photo-container div.plant:hover span, div.less-large-photo-container div.plant:hover span,
+div.photo-container div.plant:focus span, div.less-large-photo-container div.plant:focus span {
   color: black;
 }
-div.photo-container div.plant:hover img.butterfly, div.less-large-photo-container div.plant:hover img.butterfly {
+div.photo-container div.plant:hover img.butterfly, div.less-large-photo-container div.plant:hover img.butterfly,
+div.photo-container div.plant:focus img.butterfly, div.less-large-photo-container div.plant:focus img.butterfly {
   opacity: 1;
 }
 div.photo-container span.count, div.less-large-photo-container span.count {
   padding: 7px;
 }
-div.photo-container div.plant:hover span.hover, div.less-large-photo-container div.plant:hover span.hover {
+div.photo-container div.plant:hover span.hover, div.less-large-photo-container div.plant:hover span.hover
+div.photo-container div.plant:focus span.hover, div.less-large-photo-container div.plant:focus span.hover {
   background: #ffffff87;
   height: 36px;
 }
-div.photo-container div.plant:hover span.name, div.less-large-photo-container div.plant:hover span.name {
+div.photo-container div.plant:hover span.name, div.less-large-photo-container div.plant:hover span.name,
+div.photo-container div.plant:focus span.name, div.less-large-photo-container div.plant:focus span.name {
 float: right;
 margin-top: -44px;
 margin-right: 4px;
@@ -252,7 +260,8 @@ body.proportionate-body div.mid-photo-container div.plant span.hover {
   width: 75px;
   height: fit-content;
 }
-body.proportionate-body div.mid-photo-container div.plant:hover span.hover {
+body.proportionate-body div.mid-photo-container div.plant:hover span.hover,
+body.proportionate-body div.mid-photo-container div.plant:focus span.hover {
 border: 1px solid white;
 }
 div.mid-photo-container div.plant span{
@@ -262,18 +271,21 @@ div.mid-photo-container img.butterfly {
   opacity: 0;
   float: left;
 }
-div.mid-photo-container div.plant:hover span{
+div.mid-photo-container div.plant:hover span,
+div.mid-photo-container div.plant:focus span{
   color: black;
   font-size: 12px;
 }
-div.mid-photo-container div.plant:hover img.butterfly {
+div.mid-photo-container div.plant:hover img.butterfly,
+div.mid-photo-container div.plant:focus img.butterfly  {
   opacity: 1;
   width: 22px;
 }
 div.mid-photo-container span.count {
   padding: 7px;
 }
-div.mid-photo-container div.plant:hover span.hover {
+div.mid-photo-container div.plant:hover span.hover,
+div.mid-photo-container div.plant:focus span.hover  {
   background: #ffffff87;
   height: fit-content;
 }
@@ -282,7 +294,8 @@ margin-top: -15px;
 margin-right: 4px;
 display: none;
 }
-div.mid-photo-container div.plant:hover span.name {
+div.mid-photo-container div.plant:hover span.name,
+div.mid-photo-container div.plant:focus span.name {
   display: block;
 }
 
@@ -298,26 +311,30 @@ div.small-photo-container img.butterfly {
   opacity: 0;
   float: left;
 }
-div.small-photo-container div.plant:hover span{
+div.small-photo-container div.plant:hover span,
+div.small-photo-container div.plant:focus span{
   color: black;
   font-size: 12px;
   width: 150px;
   height: 150px;
 }
-div.small-photo-container div.plant:hover img.butterfly {
+div.small-photo-container div.plant:hover img.butterfly,
+div.small-photo-container div.plant:focus img.butterfly  {
   opacity: 1;
   width: 22px;
 }
 div.small-photo-container span.count {
   padding: 7px;
 }
-div.small-photo-container div.plant:hover span.hover {
+div.small-photo-container div.plant:hover span.hover,
+div.small-photo-container div.plant:focus span.hover {
   background: #ffffff87;
   height: fit-content;
   width: 70px;
   display: block;
 }
-body.proportionate-body div.small-photo-container div.plant:hover span.hover {
+body.proportionate-body div.small-photo-container div.plant:hover span.hover,
+body.proportionate-body div.small-photo-container div.plant:focus span.hover {
     border: 1px solid white;
 }
 div.small-photo-container div.plant span.name {
