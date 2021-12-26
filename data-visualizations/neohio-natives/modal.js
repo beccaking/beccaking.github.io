@@ -30,7 +30,7 @@ for(i=0;i<plantimages.length;i++){
 
     let scientificname = document.createElement('span')
     scientificname.classList.add('genus')
-    scientificname.innerHTML = '<em>' + genus + ' ' + 'species' + ' </em> '
+    scientificname.innerHTML = '<em>' + genus + ' ' + species + ' </em> '
     nameblock.append(scientificname)
 
       for(k=0;k<names.length;k++){

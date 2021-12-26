@@ -57,3 +57,25 @@ $('.click-proportion').on('click keypress', function(event){
       body[0].classList.add('grid')
      }
    })
+
+   let cards = document.getElementsByClassName('plant')
+
+   for(i=0;i<cards.length;i++){
+
+     let species = cards[i].getAttribute('id')
+
+     for(j=0;j<plants.length;j++){
+       if(species == plants[j].species){
+         var names = plants[j].name
+         var count = plants[j].count
+       }
+     }
+
+
+     let number = document.createElement('span')
+     number.innerHTML = '<img class="butterfly" src="./images/monarch-butterfly.png"/><span class="count">' + count + '</span><br><span class="name">' + names[0] + '</span>'
+     number.classList.add('hover')
+     cards[i].append(number)
+
+
+   }
