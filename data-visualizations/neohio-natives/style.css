@@ -170,8 +170,9 @@ span.click {
   border-radius: 5px;
   display: block;
   text-align: center;
-  margin: 0 auto;
-  margin-top: 13px;
+  margin: 13px 3px;
+  white-space: nowrap;
+  border: 1px solid #040404;
 }
 div.view-changer {
   display: inline-flex;
@@ -240,7 +241,7 @@ div.photo-container div.plant:focus img.butterfly, div.less-large-photo-containe
 div.photo-container span.count, div.less-large-photo-container span.count {
   padding: 7px;
 }
-div.photo-container div.plant:hover span.hover, div.less-large-photo-container div.plant:hover span.hover
+div.photo-container div.plant:hover span.hover, div.less-large-photo-container div.plant:hover span.hover,
 div.photo-container div.plant:focus span.hover, div.less-large-photo-container div.plant:focus span.hover {
   background: #ffffff87;
   height: 36px;

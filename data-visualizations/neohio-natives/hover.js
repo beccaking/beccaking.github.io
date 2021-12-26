@@ -13,7 +13,7 @@ for(i=0;i<cards.length;i++){
 
 
   let number = document.createElement('span')
-  number.innerHTML = '<img class="butterfly" src="https://img.icons8.com/ios-glyphs/30/000000/monarch-butterfly.png"/><span class="count">' + count + '</span><br><span class="name">' + names[0] + '</span>'
+  number.innerHTML = '<img class="butterfly" src="./images/monarch-butterfly.png"/><span class="count">' + count + '</span><br><span class="name">' + names[0] + '</span>'
   number.classList.add('hover')
   cards[i].append(number)
 

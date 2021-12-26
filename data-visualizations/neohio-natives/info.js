@@ -59,27 +59,31 @@ for(i=0;i<plantimages.length;i++){
 
   let theinformation = information[i]
 
-  plantimages[i].addEventListener('click', function(event){
-    event.stopPropagation();
-    if(theinformation.classList.contains('showing')){
-      this.style.border = '1px solid white';
-      theinformation.classList.remove('showing')
-    } else {
-      for(j=0;j<plantimages.length;j++){
-        plantimages[j].style.border = '1px solid white';
+  plantimages[i].addEventListener('click keypress', function(event){
+    if(event.keyCode == 13 || $(this).data('clicked', true)){
+      event.stopPropagation();
+      if(theinformation.classList.contains('showing')){
+        this.style.border = '1px solid white';
+        theinformation.classList.remove('showing')
+      } else {
+        for(j=0;j<plantimages.length;j++){
+          plantimages[j].style.border = '1px solid white';
+        }
+        for(k=0;k<information.length;k++){
+          information[k].classList.remove('showing')
+        }
+        this.style.border = '3px solid white';
+        theinformation.classList.add('showing')
       }
-      for(k=0;k<information.length;k++){
-        information[k].classList.remove('showing')
-      }
-      this.style.border = '3px solid white';
-      theinformation.classList.add('showing')
     }
   })
 
-  close.addEventListener('click', function(event){
-    event.stopPropagation();
-    currentImage.style.border = '1px solid white';
-    theinformation.classList.remove('showing')
+    close.addEventListener('click keypress', function(event){
+      if(event.keyCode == 13 || $(this).data.clicked('true')){
+        event.stopPropagation();
+        currentImage.style.border = '1px solid white';
+        theinformation.classList.remove('showing')
+      }
   })
 
 

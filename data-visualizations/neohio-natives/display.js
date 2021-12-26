@@ -43,12 +43,17 @@ var proportionview = document.getElementsByClassName('click-proportion')
 var gridview = document.getElementsByClassName('click-grid')
 var body = document.getElementsByTagName('body')
 
-proportionview[0].addEventListener('click', function(){
-   body[0].classList.add('proportionate-body')
-   body[0].classList.remove('grid')
+$('.click-proportion').on('click keypress', function(event){
+  if(event.keyCode == 13 || $(this).data('clicked', true)){
+     body[0].classList.add('proportionate-body')
+     body[0].classList.remove('grid')
+  }
  })
 
-  gridview[0].addEventListener('click', function(){
-     body[0].classList.remove('proportionate-body')
-     body[0].classList.add('grid')
+  $('.click-grid').on('click keypress', function(event){
+    console.log('here')
+    if(event.keyCode == 13 || $(this).data('clickd', true)){
+      body[0].classList.remove('proportionate-body')
+      body[0].classList.add('grid')
+     }
    })
