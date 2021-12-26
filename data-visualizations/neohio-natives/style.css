@@ -67,6 +67,7 @@ div.plant.mid {
 }
 div.small-photo-container div.plant {
   box-shadow: 1px 1px 1px #354e35;
+  margin: 25px;
 }
 div.mid-photo-container div.plant {
   box-shadow: 1px 1px 1px #354e35;
@@ -195,26 +196,52 @@ div.information {
   padding-bottom: 0;
   height: fit-content;
   border: 1px solid #261b0f;
-    top: 15%;
-    position: fixed;
+  top: 15%;
+  position: fixed;
+  z-index: 1;
+  outline: 1px solid white;
+  width: 50%;
 }
-
+div.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #0a0404;
+}
+.genus, .species {
+  margin-right: 4px;
+}
+.name-block {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
 div.information.showing {
   display: block;
 }
 
 img.thumbnail {
   width: 300px;
-  height: 300px;
-  margin: 25px;
   object-fit: cover;
+  float: right;
 }
-
+span.common {
+  text-transform: capitalize;
+}
+span.number-statement {
+  color: black;
+  display: block;
+  padding: 3%;
+  padding-top: 0;
+  border-top: 1px solid #030602;
+}
 span.close {
   cursor: pointer;
   font-size: 25px;
   float: right;
-  margin-right: 2px;
+  margin-right: 10px;
+  text-shadow: 1px 1px #262626;
+  font-family: cursive;
 }
 a.more  {
   float: left;
@@ -345,6 +372,16 @@ margin-right: 4px;
 body.grid div.small-photo-container div.plant {
   width: 70px !important;
   height: 70px !important;
+}
+
+#modal-backdrop {
+  background: #00000094;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
 }
 
 @media only screen and (max-width: 400px){

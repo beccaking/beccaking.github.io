@@ -20,31 +20,35 @@ for(i=0;i<plantimages.length;i++){
       }
     }
 
+    let modalheader = document.createElement('div')
+    modalheader.classList.add('modal-header')
+    information[i].append(modalheader)
 
-    let close = document.createElement('span')
-    close.innerHTML = 'X'
-    close.classList.add('close')
-    information[i].append(close)
+    let nameblock = document.createElement('div')
+    nameblock.classList.add('name-block')
+    modalheader.append(nameblock)
 
+    let scientificname = document.createElement('span')
+    scientificname.classList.add('genus')
+    scientificname.innerHTML = '<em>' + genus + ' ' + 'species' + ' </em> '
+    nameblock.append(scientificname)
 
       for(k=0;k<names.length;k++){
         let commonname = document.createElement('span')
-        commonname.innerHTML = 'Name(s):<br>' + names[k] + '<br>'
-        information[i].append(commonname)
+        commonname.classList.add('common-wrapper')
+        if(names.length > 1){
+          if(k == 0){
+            commonname.innerHTML = 'Common name(s): <span class="common">' + names[k] + '</span>, '
+          } else if(k == names.length - 1){
+            commonname.innerHTML += '<span class="common">' + names[k] + '</span>'
+          } else {
+            commonname.innerHTML += '<span class="common">' + names[k] + '</span>, '
+          }
+        } else {
+          commonname.innerHTML = 'Common name(s): <span class="common">' + names[k] + '</span>'
+        }
+        nameblock.append(commonname)
       }
-
-  let speciesname = document.createElement('span')
-  speciesname.innerHTML = '(<em>' + species + '</em> '
-
-  information[i].append(speciesname)
-
-  let genusname = document.createElement('span')
-  genusname.innerHTML = '<em>' + genus + '</em>)<br>'
-  information[i].append(genusname)
-
-  let number = document.createElement('span')
-  number.innerHTML = '<br>Supports ' + count + ' species of moths and butterflies<br>'
-  information[i].append(number)
 
   // let moreinfo = document.createElement('span')
   // moreinfo.innerHTML = '<br><a class="more" href="' + url + '">Click here for more information</a>'
@@ -53,36 +57,68 @@ for(i=0;i<plantimages.length;i++){
   let image = document.createElement('img')
   image.setAttribute('src', './images/'+species + '.jpeg')
   image.classList.add('thumbnail')
-  information[i].append(image)
+  modalheader.append(image)
 
+  let close = document.createElement('span')
+  close.innerHTML = 'X'
+  close.classList.add('close')
+  modalheader.append(close)
 
+  let number = document.createElement('span')
+  number.classList.add('number-statement')
+  number.innerHTML = '<br>' + genus + ' ' + species + ' supports ' + count + ' species of moths and butterflies.<br>'
+  information[i].append(number)
 
   let theinformation = information[i]
+  let modalbackdrop = document.getElementById('modal-backdrop')
 
-  plantimages[i].addEventListener('click keypress', function(event){
-    if(event.keyCode == 13 || $(this).data('clicked', true)){
+  plantimages[i].addEventListener('click', function(event){
       event.stopPropagation();
       if(theinformation.classList.contains('showing')){
-        this.style.border = '1px solid white';
         theinformation.classList.remove('showing')
+        modalbackdrop.style.display = 'none'
       } else {
-        for(j=0;j<plantimages.length;j++){
-          plantimages[j].style.border = '1px solid white';
-        }
         for(k=0;k<information.length;k++){
           information[k].classList.remove('showing')
         }
-        this.style.border = '3px solid white';
         theinformation.classList.add('showing')
+        modalbackdrop.style.display = 'block'
+      }
+  })
+
+  close.addEventListener('click', function(event){
+      event.stopPropagation();
+      theinformation.classList.remove('showing')
+      modalbackdrop.style.display = 'none'
+  })
+
+  modalbackdrop.addEventListener('click', function(event){
+    event.stopPropagation();
+    theinformation.classList.remove('showing')
+    modalbackdrop.style.display = 'none'
+  })
+
+  plantimages[i].addEventListener('keypress', function(event){
+    if(event.keyCode == 13){
+      event.stopPropagation();
+      if(theinformation.classList.contains('showing')){
+        theinformation.classList.remove('showing')
+        modalbackdrop.style.display = 'none'
+      } else {
+        for(k=0;k<information.length;k++){
+          information[k].classList.remove('showing')
+        }
+        theinformation.classList.add('showing')
+        modalbackdrop.style.display = 'block'
       }
     }
   })
 
-    close.addEventListener('click keypress', function(event){
-      if(event.keyCode == 13 || $(this).data.clicked('true')){
+    close.addEventListener('keypress', function(event){
+      if(event.keyCode == 13){
         event.stopPropagation();
-        currentImage.style.border = '1px solid white';
         theinformation.classList.remove('showing')
+        modalbackdrop.style.display = 'none'
       }
   })
 
