@@ -19,11 +19,11 @@ for (i=0;i<plants.length;i++){
 
   let plant = document.createElement('div')
   plant.classList.add('plant')
-  plant.classList.add(plants[i].species)
-  plant.setAttribute('id', plants[i].species)
+  plant.classList.add(plants[i].genus)
+  plant.setAttribute('id', plants[i].genus)
   plant.setAttribute('tabindex', '0')
 
-  plant.style.backgroundImage = "url('./images/" + plants[i].species +".jpeg')"
+  plant.style.backgroundImage = "url('./images/" + plants[i].genus +".jpeg')"
   plant.style.width = plants[i].count + 'px';
   plant.style.height = plants[i].count + 'px';
 
@@ -62,10 +62,10 @@ $('.click-proportion').on('click keypress', function(event){
 
    for(i=0;i<cards.length;i++){
 
-     let species = cards[i].getAttribute('id')
+     let genus = cards[i].getAttribute('id')
 
      for(j=0;j<plants.length;j++){
-       if(species == plants[j].species){
+       if(genus == plants[j].genus){
          var names = plants[j].name
          var count = plants[j].count
        }

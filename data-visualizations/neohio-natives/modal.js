@@ -1,7 +1,7 @@
 let plantimages = document.getElementsByClassName('plant')
 
 for(i=0;i<plantimages.length;i++){
-  let species = plantimages[i].getAttribute('id')
+  let genus = plantimages[i].getAttribute('id')
 
 
   plantimages[i].insertAdjacentHTML('afterend', '<div class="information"></div>')
@@ -12,8 +12,8 @@ for(i=0;i<plantimages.length;i++){
 
 
     for(j=0;j<plants.length;j++){
-      if(species == plants[j].species){
-        var genus = plants[j].genus
+      if(genus == plants[j].genus){
+        var species = plants[j].species
         var names = plants[j].name
         var count = plants[j].count
         var url = plants[j].url
@@ -55,7 +55,7 @@ for(i=0;i<plantimages.length;i++){
   // information[i].append(moreinfo)
 
   let image = document.createElement('img')
-  image.setAttribute('src', './images/'+species + '.jpeg')
+  image.setAttribute('src', './images/'+ genus + '.jpeg')
   image.classList.add('thumbnail')
   modalheader.append(image)
 
@@ -66,7 +66,7 @@ for(i=0;i<plantimages.length;i++){
 
   let number = document.createElement('span')
   number.classList.add('number-statement')
-  number.innerHTML = '<br>' + genus + ' ' + species + ' supports ' + count + ' species of moths and butterflies.<br>'
+  number.innerHTML = '<br><em>' + genus + ' ' + species + '</em> supports ' + count + ' species of moths and butterflies.<br>'
   information[i].append(number)
 
   let theinformation = information[i]
@@ -74,6 +74,39 @@ for(i=0;i<plantimages.length;i++){
 
   plantimages[i].addEventListener('click', function(event){
       event.stopPropagation();
+
+
+        // //do something about duplicate images when you click twice
+        //
+        // let baseUrlKey = 'https://api.gbif.org/v1/species?name=' + species
+        // let taxonKey = ''
+        //
+        // $.ajax({
+        //   url: baseUrlKey,
+        //   crossDomain: true,
+        //   success: function(data){
+        //     taxonKey = data.results[1].taxonID
+        //   },
+        //   error: function(data){
+        //     console.log('Error fetching taxon key')
+        //   }
+        // })
+        //
+        // let baseUrlMap = 'https://api.gbif.org/v2/map/occurrence/density/0/0/0@1x.png?srs=EPSG:3857&style=greenHeat.point&taxonKey='
+        //
+        // $.ajax({
+        //   url: baseUrlMap + taxonKey,
+        //   crossDomain: true,
+        //   success: function(data){
+        //     let map = document.createElement('img')
+        //     map.setAttribute('src', baseUrlMap + taxonKey)
+        //     theinformation.append(map)
+        //   },
+        //   error: function(data){
+        //     console.log('Error fetching map')
+        //   }
+        // })
+
       if(theinformation.classList.contains('showing')){
         theinformation.classList.remove('showing')
         modalbackdrop.style.display = 'none'

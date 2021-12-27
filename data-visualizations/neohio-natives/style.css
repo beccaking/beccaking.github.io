@@ -196,7 +196,7 @@ div.information {
   padding-bottom: 0;
   height: fit-content;
   border: 1px solid #261b0f;
-  top: 15%;
+  top: 3%;
   position: fixed;
   z-index: 1;
   outline: 1px solid white;
@@ -239,7 +239,7 @@ span.close {
   cursor: pointer;
   font-size: 25px;
   float: right;
-  margin-right: 10px;
+  margin: 0 10px;
   text-shadow: 1px 1px #262626;
   font-family: cursive;
 }
