@@ -43,6 +43,13 @@ ul li {
   width: 100%;
   margin: 10% 0;
 }
+#data-visualizations {
+  margin: 25px auto;
+  width: 50%;
+}
+#data-visualizations img {
+  width: 100%;
+}
 .square {
   display: flex;
   border-bottom: 1px solid #b5b3af;
@@ -264,6 +271,9 @@ footer #footer-bio img {
   }
   #WeWriteBlogPosts {
     margin-top: 9%;
+  }
+  #data-visualizations {
+    width: 90%;
   }
   .inner-column {
     width: 100%;
