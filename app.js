@@ -1,3 +1,4 @@
+/*
 $(function(){
   let allMedia = document.querySelectorAll('.media div')
 
@@ -41,3 +42,4 @@ $(function(){
     }
   })
 })
+*/
