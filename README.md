@@ -1,2 +1,2 @@
 # rebeccaking.info
-## Online portfolio and side projects
+## Web development portfolio
