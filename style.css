@@ -7,79 +7,34 @@ body {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
 }
 header {
-  padding: 6%;
-  border-bottom: 1px solid #b5b3af;
   background-image: url('./images/background.jpeg');
+  border-bottom: 1px solid #b5b3af;
+  padding: 6%;
 }
 h3 {
   width: fit-content;
 }
-.float {
-  float: right;
-  width: 85%;
+h4 {
+  margin-top: 0;
+}
+ul {
+  width: 100%;
+  padding: 0;
+}
+ul li {
+  font-style: italic;
+  list-style-type: none;
+  margin: 0;
+}
+img {
+  width: 100%;
 }
 a:hover img {
   cursor: pointer;
 }
-#resume {
-  color: #b5b3af;
-  text-decoration: none;
-  font-style: italic;
-}
-ul li {
-  list-style-type: none;
-  margin: 4% 1%;
-}
-#GA ul,
-#Amerimark ul,
-#NCM ul {
-  width: 100%;
-  padding: 0;
-}
-#Amerimark ul li {
-  margin: 0;
-}
-#GA ul li a {
-  width: 100%;
-  margin: 10% 0;
-}
-#data-visualizations {
-  margin: 25px auto;
-  width: 50%;
-}
-#data-visualizations img {
-  width: 100%;
-}
-.square {
-  display: flex;
-  border-bottom: 1px solid #b5b3af;
-  padding-bottom: 6%;
-}
-.square.one {
-  background: linear-gradient(45deg, black, white);
-}
-.square.two {
-  background: #222122;
-  padding-bottom: 10%;
-}
-.square.three {
-  background: linear-gradient(45deg, black, #7c7c7c);
-}
-.square.two ul {
-  margin-top: 5%;
-}
-.square a {
-  display: block;
-  text-align: left;
-  color: whitesmoke;
-  text-decoration: none;
-  width: 100%;
-}
-.square.two #NCM a {
-  width: 100%;
-}
-.square.two #Freelance img {
-  width: 100%;
+.float {
+  float: right;
+  width: 85%;
 }
 .half-width {
   width: 50%;
@@ -87,120 +42,97 @@ ul li {
 .full-width {
   width: 100%;
 }
-#NCM,
-#Freelance {
+.square {
+  display: flex;
+  border-bottom: 1px solid #b5b3af;
+  padding: 3% 6%;
+}
+.square a {
+  color: whitesmoke;
+  display: block;
+  text-align: left;
+  text-decoration: none;
   width: 100%;
-  padding: 3% 6%;
-  padding-bottom: 0;
 }
-#Amerimark,
-#GA,
-#AthensNews {
-  padding: 3% 6%;
-  padding-bottom: 0;
+.square.one {
+  background: linear-gradient(45deg, black, white);
+  justify-content: space-between;
 }
-#GA.column.left {
-  width: 80%;
+.square.two {
+  flex-direction: column;
+}
+.square.two span {
+  display: block;
+  margin-bottom: 22px;
+}
+.square.two a.view {
+  font-style: italic;
+  margin-bottom: 22px;
+}
+.square.three {
+  background: #222122;
+  justify-content: space-between;
+  padding-bottom: 10%;
+}
+.square.three .media {
+  margin-top: 0;
+}
+.square.four {
+  background: linear-gradient(45deg, black, #7c7c7c);
+}
+#resume {
+  color: #b5b3af;
+  font-style: italic;
+  text-decoration: none;
 }
 .column.left {
-  width: 40%;
+  width: 30%;
 }
 .column.right {
   display: flex;
   flex-direction: column;
-}
-.column.right a img {
-  width: 100%;
-}
-#WeWriteBlogPosts {
-  width: 88%;
-  margin-top: 6%;
-}
-#WeWriteBlogPosts a img {
-  margin-top: 4%;
+  width: 60%;
 }
 .media {
+  align-items: flex-start;
   display: flex;
-  align-items: center;
-  margin-left: -47px;
   margin-top: 14%;
 }
 .media div {
-  display: none;
+  margin: 0 22px;
+  width: 250px;
 }
-.media div.active {
-  display: block;
-}
-.media video, .media img {
-  width: 100%;
-}
-.media div {
-  width: 275px;
-}
-.arrow {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 10px;
-  background: #8b8b8b;
-  border-radius: 50%;
-  width: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid whitesmoke;
-}
-.arrow:hover {
-  cursor: pointer;
-  background: #040404;
-}
-#AthensNews .subsquare {
-  display: flex;
-}
-.inner-column {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 1%;
-}
-.square #AthensNews .inner-column a {
-  width: 100%;
-}
-footer img {
-  width: 21%;
-  margin-left: 2%;
-  margin-top: 2%;
+.media img {
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
 }
 footer {
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: black;
   color: #b5b3af;
+  display: flex;
+  padding: 3% 6%;
 }
-#footer-bio {
-  width: 45%;
-  padding: 7%;
+.footer-bio {
+  margin: 10px 35px 0;
 }
-#footer-bio a {
+.footer-bio-details a {
+  align-items: center;
   color: #b5b3af;
   display: flex;
-  align-items: center;
-  width: fit-content;
-  padding: 1% 0;
   text-decoration: none;
-  font-style: italic;
 }
-footer #footer-bio img {
-  width: 7%;
-}
-#footer-bio span:first-of-type {
-  padding: 1px;
+.footer-bio-details span:first-of-type {
   font-size: 20px;
+  line-height: 20px;
 }
-#footer-bio span:last-of-type {
-  margin-top: 16px;
-  display: inline-block;
-  line-height: 31px;
+.headshot {
+  width: 200px;
+}
+.linkedin {
+  margin-left: 10px;
+  width: 25px;
 }
 @media only screen and (max-width: 750px){
   .half-width {
@@ -209,28 +141,18 @@ footer #footer-bio img {
   img {
     width: 100%;
   }
-  #Amerimark ul:first-child {
+  .square.one ul:first-child {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0;
     height: 200px;
   }
-  ul li {
-    margin: 0;
-  }
-  .square.two ul li {
-    margin: 10% 0;
-  }
   .media {
     align-items: center;
     justify-content: center;
     margin-left: 0;
     margin-bottom: 10%;
-  }
-  .square {
-    flex-direction: column;
-    align-items: center;
   }
   .float {
     width: 100%;
@@ -240,56 +162,45 @@ footer #footer-bio img {
   .column.right {
     align-items: center;
   }
+  .square {
+    flex-direction: column;
+    align-items: center;
+  }
   .square.one {
     background: linear-gradient(45deg, black, #bfbfbf);
     padding-bottom: 24%;
   }
-  .square.one video {
-    margin: 5%;
+  .square.three a {
+    margin: 0 auto;
+    width: 100%;
   }
-  .square.two ul,
-  .square.three ul {
+  .square.three ul li {
+    margin: 10% 0;
+  }
+  .square.three ul,
+  .square.four ul {
     margin: 5% auto;
     padding: 0;
   }
-  .square.two a{
-    width: 100%;
-    margin: 0 auto;
-  }
-  .square.three a {
-    width: 100%;
+  .square.four a {
     margin: 2% auto;
-  }
-  #Amerimark,
-  #NCM,
-  #GA.column.left,
-  #Freelance {
-    width: 90%;
-  }
-  #AthensNews .subsquare {
-    flex-direction: column;
-    align-items: center;
-  }
-  #WeWriteBlogPosts {
-    margin-top: 9%;
-  }
-  #data-visualizations {
-    width: 90%;
-  }
-  .inner-column {
     width: 100%;
   }
-  #footer-bio {
-    width: 85%;
+  .media div {
+    margin: 0 2px;
+    width: unset;
+  }
+  .footer-bio-details {
     font-size: 88%;
     padding-bottom: 22%;
+    width: 85%;
   }
   footer {
     flex-direction: column;
   }
-  footer img#headshot {
-    width: 85%;
-    margin-left: 0;
+  .headshot {
     margin-bottom: -10%;
+    margin-left: 0;
+    width: 85%;
   }
 }
