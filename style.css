@@ -36,9 +36,6 @@ a:hover img {
   float: right;
   width: 85%;
 }
-.half-width {
-  width: 50%;
-}
 .full-width {
   width: 100%;
 }
@@ -72,7 +69,6 @@ a:hover img {
 .square.three {
   background: #222122;
   justify-content: space-between;
-  padding-bottom: 10%;
 }
 .square.three .media {
   margin-top: 0;
@@ -149,72 +145,59 @@ footer {
   width: 25px;
 }
 @media only screen and (max-width: 750px){
-  .half-width {
-    width: 75%;
-  }
-  img {
-    width: 100%;
-  }
-  .square.one ul:first-child {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0;
-    height: 200px;
-  }
-  .media {
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
-    margin-bottom: 10%;
-  }
   .float {
     width: 100%;
     margin: 0 auto;
     display: block;
   }
+  .column.left,
+  .column.right {
+    width: 100%;
+  }
+  .column.left {
+    margin-bottom: 8%;
+  }
   .column.right {
     align-items: center;
   }
   .square {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    padding: 4% 6% 15%;
+  }
+  .square ul:last-child {
+    margin-bottom: 0;
   }
   .square.one {
     background: linear-gradient(45deg, black, #bfbfbf);
-    padding-bottom: 24%;
   }
   .square.three a {
     margin: 0 auto;
     width: 100%;
   }
-  .square.three ul li {
-    margin: 10% 0;
-  }
-  .square.three ul,
-  .square.four ul {
-    margin: 5% auto;
-    padding: 0;
-  }
   .square.four a {
     margin: 2% auto;
     width: 100%;
+  }
+  .media {
+    margin-top: 8%;
   }
   .media div {
     margin: 0 2px;
     width: unset;
   }
-  .footer-bio-details {
-    font-size: 88%;
-    padding-bottom: 22%;
-    width: 85%;
-  }
   footer {
+    align-items: center;
     flex-direction: column;
+    padding: 25px;
+  }
+  .footer-bio {
+    margin: 0 35px;
   }
   .headshot {
-    margin-bottom: -10%;
-    margin-left: 0;
-    width: 85%;
+    border: 1px solid black;
+    margin-bottom: 25px;
+    outline: 1px solid white;
+    width: 265px;
   }
 }
