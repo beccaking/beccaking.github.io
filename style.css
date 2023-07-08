@@ -7,7 +7,7 @@ body {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
 }
 header {
-  background-image: url('./images/background.jpeg');
+  background-image: url('./images/background.webp');
   border-bottom: 1px solid #b5b3af;
   padding: 6%;
 }
@@ -42,6 +42,7 @@ a:hover img {
 .square {
   display: flex;
   border-bottom: 1px solid #b5b3af;
+  justify-content: space-between;
   padding: 3% 6%;
 }
 .square a {
@@ -51,43 +52,43 @@ a:hover img {
   text-decoration: none;
   width: 100%;
 }
-.square.one {
-  background: linear-gradient(45deg, black, white);
-  justify-content: space-between;
+.square.wyanoke .column.right a:first-of-type {
+  margin-bottom: 44px;
 }
-.square.two {
+.square.amerimark {
+  background: linear-gradient(45deg, black, white);
+}
+.square.dataviz {
   flex-direction: column;
 }
-.square.two span {
+.square.dataviz span {
   display: block;
   margin-bottom: 22px;
 }
-.square.two a.view {
+.square.dataviz a.view {
   font-style: italic;
   margin-bottom: 22px;
 }
-.square.three {
+.square.northcoast {
   background: #222122;
-  justify-content: space-between;
 }
-.square.three .media {
+.square.northcoast .media {
   margin-top: 0;
 }
-.square.four {
+.square.generalassembly {
   background: linear-gradient(45deg, black, #7c7c7c);
-  justify-content: space-between;
 }
-.square.four span {
+.square.generalassembly span {
   display: block;
   margin-bottom: 22px;
 }
-.square.four img {
+.square.generalassembly img {
   margin-bottom: 44px;
 }
-.square.four a:last-of-type img {
+.square.generalassembly a:last-of-type img {
   margin-bottom: 0;
 }
-.square.four a span {
+.square.generalassembly a span {
   font-style: italic;
 }
 #resume {
@@ -119,17 +120,19 @@ a:hover img {
 }
 footer {
   align-items: flex-start;
-  background: #222222;
-  color: #b5b3af;
+  background: linear-gradient(0deg, #080808, #7c7c7c);
+  color: #fefefe;
   display: flex;
   padding: 3% 6%;
 }
 .footer-bio {
+  background: #2a2a2a;
   margin: 10px 35px 0;
+  padding: 20px;
 }
 .footer-bio-details a {
   align-items: center;
-  color: #b5b3af;
+  color: #d6d6d6;
   display: flex;
   text-decoration: none;
 }
@@ -138,11 +141,13 @@ footer {
   line-height: 20px;
 }
 .headshot {
+  border: 1px solid #080808;
+  outline: 1px solid white;
   width: 200px;
 }
 .linkedin {
-  margin-left: 10px;
-  width: 25px;
+  margin-left: 5px;
+  width: 20px;
 }
 @media only screen and (max-width: 750px){
   .float {
@@ -168,14 +173,14 @@ footer {
   .square ul:last-child {
     margin-bottom: 0;
   }
-  .square.one {
+  .square.amerimark {
     background: linear-gradient(45deg, black, #bfbfbf);
   }
-  .square.three a {
+  .square.northcoast a {
     margin: 0 auto;
     width: 100%;
   }
-  .square.four a {
+  .square.generalassembly a {
     margin: 2% auto;
     width: 100%;
   }
@@ -195,9 +200,7 @@ footer {
     margin: 0 35px;
   }
   .headshot {
-    border: 1px solid black;
     margin-bottom: 25px;
-    outline: 1px solid white;
     width: 265px;
   }
 }
