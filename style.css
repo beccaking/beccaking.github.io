@@ -107,7 +107,7 @@ a:hover img {
 .media {
   align-items: flex-start;
   display: flex;
-  margin-top: 14%;
+  margin-top: 44px;
 }
 .media div {
   margin: 0 22px;
@@ -127,7 +127,10 @@ footer {
 }
 .footer-bio {
   background: #2a2a2a;
+  border-left: 1px solid #999999;
+  border-right: 1px solid #999999;
   margin: 10px 35px 0;
+  outline: 1px solid black;
   padding: 20px;
 }
 .footer-bio-details a {
@@ -141,8 +144,8 @@ footer {
   line-height: 20px;
 }
 .headshot {
-  border: 1px solid #080808;
-  outline: 1px solid white;
+  border: 1px solid #999999;
+  outline: 1px solid #080808;
   width: 200px;
 }
 .linkedin {
@@ -173,6 +176,9 @@ footer {
   .square ul:last-child {
     margin-bottom: 0;
   }
+  .square.wyanoke .column.right a:first-of-type {
+    margin-bottom: 22px;
+  }
   .square.amerimark {
     background: linear-gradient(45deg, black, #bfbfbf);
   }
@@ -184,8 +190,14 @@ footer {
     margin: 2% auto;
     width: 100%;
   }
+  .square.generalassembly img {
+    margin-bottom: 22px;
+  }
+  .square.generalassembly span {
+    margin-bottom: 10px;
+  }
   .media {
-    margin-top: 8%;
+    margin-top: 22px;
   }
   .media div {
     margin: 0 2px;
