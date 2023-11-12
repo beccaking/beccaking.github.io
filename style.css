@@ -23,7 +23,11 @@ ul {
 }
 ul li {
   font-style: italic;
-  margin: 0;
+  margin-left: 15px;
+}
+ul.no-bullets li {
+  list-style-type: none;
+  margin-left: 0;
 }
 img {
   width: 100%;
