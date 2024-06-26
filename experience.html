@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rebecca King's Portfolio">
+    <title>Rebecca King</title>
+    <link rel="stylesheet" href="style.css?v=4" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/svg" href="./images/code-commit-solid.svg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="experience">
+    <header>
+      <div class="mobile-nav">
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="close">X</div>
+        <nav>
+          <ul>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./experience.html">Experience</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1><a href="./index.html">Rebecca King</a></h1>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="./about.html">About Me</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li><a href="./experience.html">Experience</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="landing-content">
+        <div class="inner-container">
+          <div class="work-experience">
+            <h2>Work Experience</h2>
+            <div class="work-columns">
+              <div class="full-time">
+                <div class="experience-listing">
+                  <h3>Frontend Developer</h3>
+                  <h4>The Wyanoke Group</h4>
+                  <h4>September 2022 - Present</h4>
+                  <h4>Full Time</h4>
+                  <p>Extensive use of JavaScript and JavaScript libraries for animations, widgets, and interactive site features. Create true to design front end interfaces using HTML5 and CSS/Sass. Focus on accessibility, cross-browser compatibility, and responsive design.</p>
+                </div>
+                <div class="experience-listing">
+                  <h3>Wed Developer</h3>
+                  <h4>Amerimark Direct</h4>
+                  <h4>November 2020 - September 2022</h4>
+                  <h4>Full Time</h4>
+                  <p>Primary front-end specialist on a team of web developers. Create fully responsive webpages according to design specifications using HTML, CSS and Less Preprocessing, JavaScript and jQuery. Used Git version control to track projects and organize parallel tasks. Use SQL and Progress to query and integrate data.</p>
+                </div>
+                <div class="experience-listing">
+                  <h3>Wed Developer</h3>
+                  <h4>North Coast Media</h4>
+                  <h4>January 2020 - July 2020</h4>
+                  <h4>Full Time</h4>
+                  <p>Developed and maintained websites based on a Wordpress CMS, with a focus on CSS and implementation of APIs through JavaScript. Created and implemented responsive designs to replace desktop-centric webpages.</p>
+                </div>
+              </div>
+              <div class="freelance">
+                <div class="experience-listing">
+                  <h3>Prompt Engineer</h3>
+                  <h4>Shortform</h4>
+                  <h4>February 2024 - Present</h4>
+                  <h4>Part Time, Freelance</h4>
+                  <p>Design prompts for large language models to draft SEO-focused blog posts at scale. Use GPT4 and Claude 3 Opus.</p>
+                </div>
+              </div>
+            </div>
+            <div class="education">
+              <h2>Education</h2>
+              <div class="experience-listing">
+                <h3>Software Engineering Certificate</h3>
+                <h3>General Assembly</h3>
+                <h4>September 2019 - January 2020</h4>
+                <h4>Full Time</h4>
+                <p>Certificate program in full-stack web development. Created web applications using JavaScript, jQuery, PHP, Angular, React, SQL, MongoDb, HTML, CSS, Git version control.</p>
+              </div>
+              <div class="experience-listing">
+                <h3>Master of Science, Journalism</h3>
+                <h3>Ohio University</h3>
+                <h4>August 2017 - May 2019</h4>
+                <h4>Full Time</h4>
+                <p>Completed two years of coursework in digital media, including interactive media and data visualization. Withdrew out of medical necessity.</p>
+              </div>
+              <div class="experience-listing">
+                <h3>Bachelor of Science, Kinesiology with a Co-Major in Environmental Science</h3>
+                <h3>Miami University</h3>
+                <h4>September 2012 - May 2016</h4>
+                <h4>Full Time</h4>
+                <p>Studied a broad range of sciences including biology, psychology, physics, chemistry, anatomy, and physiology. Graduated from the University Honors Program.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+      <script>
+        $('.hamburger').on('click', function(){
+          $('.mobile-nav nav').removeClass('hide').addClass('show')
+          $('.close').show()
+          $(this).hide();
+        })
+
+        $('.close').on('click', function(){
+          $('.mobile-nav nav').removeClass('show').addClass('hide')
+          $('.hamburger').show();
+          $(this).hide();
+        })
+      </script>
+      </script>
+    </footer>
+  </body>
+</html>

@@ -1,221 +1,455 @@
-html {
-  overflow-x: hidden;
+@keyframes fadeIn {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
+@keyframes leftEnter {
+    from {
+        left: -50%;
+    }
+
+    to {
+        left: 15px;
+    }
+}
+
+@keyframes leftLeave {
+    from {
+        left: 15px;
+    }
+
+    to {
+        left: -50%;
+    }
+}
+
 body {
-  background: #080808;
-  color: whitesmoke;
-  font-family: 'Open Sans', helvetica, arial, sans-serif;
+    margin: 0;
 }
-header {
-  background-image: url('./images/background.webp');
-  border-bottom: 1px solid #b5b3af;
-  padding: 6%;
+
+.home main {
+    background: #c1757557;
 }
-h3 {
-  width: fit-content;
+
+body.home {
+    background-image: url('./images/background-large.jpg');
+    background-position: center;
+    background-size: 100%;
 }
-h4 {
-  margin-top: 0;
+
+body.home .landing-content {
+    border-bottom: 4px solid #291f02;
 }
-ul {
-  width: 100%;
-  padding: 0;
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+label,
+input[type="submit"],
+.close {
+    color: #291f02;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: #f89ecb 1px 0 5px;
 }
-ul li {
-  font-style: italic;
-  margin-left: 15px;
+
+input[type="email"],
+input[type="text"],
+textarea {
+    font-family: monospace;
 }
-ul.no-bullets li {
-  list-style-type: none;
-  margin-left: 0;
-}
-img {
-  width: 100%;
-}
-a:hover img {
-  cursor: pointer;
-}
-.float {
-  float: right;
-  width: 85%;
-}
-.full-width {
-  width: 100%;
-}
-.square {
-  display: flex;
-  border-bottom: 1px solid #b5b3af;
-  justify-content: space-between;
-  padding: 3% 6%;
-}
-.square a {
-  color: whitesmoke;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  width: 100%;
-}
-.square.wyanoke .column.right a:first-of-type {
-  margin-bottom: 44px;
-}
-.square.amerimark {
-  background: linear-gradient(45deg, black, white);
-}
-.square.dataviz {
-  flex-direction: column;
-}
-.square.dataviz span {
-  display: block;
-  margin-bottom: 22px;
-}
-.square.dataviz a.view {
-  font-style: italic;
-  margin-bottom: 22px;
-}
-.square.northcoast {
-  background: #222122;
-}
-.square.northcoast .media {
-  margin-top: 0;
-}
-.square.generalassembly {
-  background: linear-gradient(45deg, black, #7c7c7c);
-}
-.square.generalassembly span {
-  display: block;
-  margin-bottom: 22px;
-}
-.square.generalassembly img {
-  margin-bottom: 44px;
-}
-.square.generalassembly a:last-of-type img {
-  margin-bottom: 0;
-}
-.square.generalassembly a span {
-  font-style: italic;
-}
-#resume {
-  color: #b5b3af;
-  font-style: italic;
-  text-decoration: none;
-}
-.column.left {
-  width: 30%;
-}
-.column.right {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-.media {
-  align-items: flex-start;
-  display: flex;
-  margin-top: 44px;
-}
-.media div {
-  margin: 0 22px;
-  width: 250px;
-}
-.media img {
-  height: 400px;
-  object-fit: cover;
-  object-position: top;
-}
-footer {
-  align-items: flex-start;
-  background: linear-gradient(0deg, #080808, #7c7c7c);
-  color: #fefefe;
-  display: flex;
-  padding: 3% 6%;
-}
-.footer-bio {
-  background: #2a2a2a;
-  border-left: 1px solid #999999;
-  border-right: 1px solid #999999;
-  margin: 10px 35px 0;
-  outline: 1px solid black;
-  padding: 20px;
-}
-.footer-bio-details a {
-  align-items: center;
-  color: #d6d6d6;
-  display: flex;
-  text-decoration: none;
-}
-.footer-bio-details span:first-of-type {
-  font-size: 20px;
-  line-height: 20px;
-}
-.headshot {
-  border: 1px solid #999999;
-  outline: 1px solid #080808;
-  width: 200px;
-}
-.linkedin {
-  margin-left: 5px;
-  width: 20px;
-}
-@media only screen and (max-width: 750px){
-  .float {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-  }
-  .column.left,
-  .column.right {
-    width: 100%;
-  }
-  .column.left {
-    margin-bottom: 8%;
-  }
-  .column.right {
-    align-items: center;
-  }
-  .square {
-    align-items: center;
+
+nav ul {
+    display: flex;
     flex-direction: column;
-    padding: 4% 6% 15%;
-  }
-  .square ul:last-child {
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    font-size: 28px;
+    line-height: 40px;
+    margin: 20px 20px 20px 0;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-size: 32px;
+}
+
+h1,
+h2 {
+    width: fit-content;
+}
+
+h1 {
+    font-size: 70px;
     margin-bottom: 0;
-  }
-  .square.wyanoke .column.right a:first-of-type {
-    margin-bottom: 22px;
-  }
-  .square.amerimark {
-    background: linear-gradient(45deg, black, #bfbfbf);
-  }
-  .square.northcoast a {
-    margin: 0 auto;
-    width: 100%;
-  }
-  .square.generalassembly a {
-    margin: 2% auto;
-    width: 100%;
-  }
-  .square.generalassembly img {
-    margin-bottom: 22px;
-  }
-  .square.generalassembly span {
-    margin-bottom: 10px;
-  }
-  .media {
-    margin-top: 22px;
-  }
-  .media div {
-    margin: 0 2px;
-    width: unset;
-  }
-  footer {
-    align-items: center;
+}
+
+h2 {
+    font-size: 34px;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
     flex-direction: column;
-    padding: 25px;
-  }
-  .footer-bio {
-    margin: 0 35px;
-  }
-  .headshot {
-    margin-bottom: 25px;
-    width: 265px;
-  }
+    width: 630px;
+}
+
+input {
+    height: 30px;
+    width: 300px;
+}
+
+textarea {
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+input,
+textarea {
+    background: #f8efef;
+    border: 1px solid #2a1f02;
+}
+
+label,
+input[type="submit"] {
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    background: #2a1f02;
+    border-radius: 4px;
+    color: #f8efef;
+    font-size: 16px;
+    height: 48px;
+    width: 250px;
+}
+
+footer img {
+    display: block;
+    filter: brightness(0) saturate(100%) invert(13%) sepia(65%) saturate(503%) hue-rotate(7deg) brightness(92%) contrast(103%);
+    margin: 50px auto;
+    width: 30px;
+}
+
+footer img:hover {
+    width: 32px;
+}
+
+
+.landing-content {
+    border-bottom: 4px solid #291f02;
+    border-top: 4px solid #291f02;
+    margin: 0 auto;
+    margin-top: 40px;
+    min-height: 500px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+/*
+.inner-container {
+    animation: fadeIn 1s;
+    opacity: 1;
+}
+*/
+
+.name-email {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.name-email .form-group:first-of-type {
+    margin-right: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message,
+.success-message {
+    display: none;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.about nav ul,
+.contact nav ul,
+.experience nav ul,
+.portfolio nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.about .landing-content {
+    padding: 0 !important;
+}
+
+.about .landing-content .selfie {
+    border-bottom: 4px solid #2a1f02;
+    border-left: 2px solid #2a1f02;
+    border-right: 2px solid #2a1f02;
+    border-top: 3px solid #2a1f02;
+    margin-left: 50px;
+    object-fit: cover;
+    outline: 1px solid #d083d0;
+    width: 240px;
+}
+
+.about .landing-content .linkedin {
+    width: 20px;
+}
+
+.about .landing-content p {
+    display: block;
+}
+
+.about .inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px auto;
+    width: 70%;
+}
+
+.about .landing-content .inner-container p:first-of-type {
+    margin-top: 0;
+}
+
+.about h1,
+.contact h1,
+.experience h1,
+.portfolio h1 {
+    margin: 0 auto;
+}
+
+.about header h1 a,
+.contact header h1 a,
+.experience header h1 a,
+.portfolio header h1 a {
+    text-decoration: none;
+}
+
+.about nav li a:hover ,
+.contact nav li a:hover,
+.experience nav li a:hover,
+.portfolio nav li a:hover {
+    font-size: 28px;
+}
+
+.about nav li a,
+.contact nav li a,
+.experience nav li a,
+.portfolio nav li a {
+    border-right: 1px solid #2a1f02;
+    padding-right: 10px;
+}
+
+.about nav li:last-of-type a,
+.contact nav li:last-of-type a,
+.experience nav li:last-of-type a,
+.portfolio nav li:last-of-type a {
+    border-right: none;
+}
+
+.experience .work-columns {
+    display: flex;
+}
+
+.experience .work-columns .full-time {
+    width: 100%;
+}
+
+.experience .work-columns .freelance {
+    margin-left: 40px;
+    width: 60%;
+}
+
+.work-experience h2 {
+    margin-bottom: 15px;
+}
+
+.experience-listing {
+    margin-bottom: 30px;
+}
+
+.experience-listing h3,
+.experience-listing h4 {
+    margin: 0 0 5px 0;
+}
+
+.contact .inner-container {
+    margin: 25px auto;
+    width: 630px;
+}
+
+body.experience {
+    margin-right: 40px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.hamburger div {
+    background: #2a1f02;
+    box-shadow: 1px 1px 2px #f89ecb;
+    height: 5px;
+    margin-top: 5px;
+    width: 30px;
+}
+
+.close {
+    display: none;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.contact-details {
+    margin-top: 35px;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+    html {
+        background: #c1757557;
+    }
+
+    .about .landing-content .inner-container {
+        flex-direction: column;
+        margin: 25px auto;
+        width: 90%;
+    }
+
+    .selfie {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body.home {
+        background: #c1757557;
+    }
+
+    .experience .work-columns {
+        flex-direction: column;
+    }
+
+    .experience .work-columns .freelance {
+        margin-left: 0;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav nav {
+        background: white;
+        box-shadow: 1px 1px 2px #2a1f02;
+        left: -50%;
+        position: absolute;
+        top: 55px;
+        z-index: 1;
+    }
+
+    header {
+        display: flex;
+        height: 30px;
+    }
+
+    .about nav ul,
+    .experience nav ul,
+    .portfolio nav ul,
+    .contact nav ul {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .about nav ul li,
+    .experience nav ul li,
+    .portfolio nav ul li,
+    .contact nav ul li {
+        border-bottom: 1px solid #2a1f02;
+        padding-left: 8px;
+    }
+
+    .about nav ul li a,
+    .experience nav ul li a,
+    .portfolio nav ul li a,
+    .contact nav ul li a {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    body:not(.home) h1 {
+        float: right;
+        font-size: 40px;
+        position: absolute;
+        right: 25px;
+    }
+
+    .about .landing-content .selfie {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .about .landing-content .inner-container {
+        flex-direction: column;
+        margin: 25px auto;
+        width: 90%;
+    }
+
+    .about .text {
+        margin-bottom: 10px;
+    }
+
+    nav.show {
+        animation-duration: 0.5s;
+        animation-name: leftEnter;
+        left: 15px;
+    }
+
+    nav.hide {
+        animation-duration: 0.5s;
+        animation-name: leftLeave;
+    }
+
+    .name-email {
+        flex-direction: column;
+    }
+
+    textarea {
+        width: 300px;
+    }
 }

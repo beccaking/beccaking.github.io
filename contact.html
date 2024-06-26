@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rebecca King's Portfolio">
+    <title>Rebecca King</title>
+    <link rel="stylesheet" href="style.css?v=4" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/svg" href="./images/code-commit-solid.svg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="contact">
+    <header>
+      <div class="mobile-nav">
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="close">X</div>
+        <nav>
+          <ul>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./experience.html">Experience</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1><a href="./index.html">Rebecca King</a></h1>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="./about.html">About Me</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li><a href="./experience.html">Experience</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="landing-content">
+        <div class="inner-container">
+          <h2>Contact Me</h2>
+          <form id="contact-form">
+            <input type="hidden" name="contact_number" value="123">
+            <div class="name-email">
+              <div class="form-group">
+                <label for="user-name">Name</label>
+                <input id="user-name" type="text" name="user_name" required>
+              </div>
+              <div class="form-group">
+                <label for="user-email">Email</label>
+                <input id="user-email" type="email" name="user_email" required>
+              </div>
+            </div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <input type="submit" value="Send">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+          </form>
+          <p class="error-message">Please try again.</p>
+          <p class="success-message">Thank you for your message! I'll be in touch with you shortly.</p>
+          <div class="contact-details">
+            <h3>216-570-0627</h3>
+            <h3>rebecca.lynne.king@gmail.com</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>      
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+      <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+
+      <script>
+
+        $('.hamburger').on('click', function(){
+          $('.mobile-nav nav').removeClass('hide').addClass('show')
+          $('.close').show()
+          $(this).hide();
+        })
+
+        $('.close').on('click', function(){
+          $('.mobile-nav nav').removeClass('show').addClass('hide')
+          $('.hamburger').show();
+          $(this).hide();
+        })
+      </script>
+
+      <script>
+        emailjs.init({
+          publicKey: 'vL3IgMGtW5FA7Fvg3',
+        });
+        </script>
+
+        <script type="text/javascript">
+          window.onload = function() {
+              document.getElementById('contact-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  
+                  $('input[type="submit"]').addClass('loading-wheel')
+                  $('.lds-ellipsis').css('display', 'inline-block')
+
+                  emailjs.sendForm('service_rcnfp55', 'template_1rgpcxv', this)
+                      .then(() => {
+                          $('.success-message').show();
+                          $('form').hide();
+                          $('h2').hide();
+                          $('.landing-content').addClass('shorter')
+                      }, (error) => {
+                          $('.error-message').show();
+                          $('input[type="submit"]').removeClass('loading-wheel')
+                          $('.lds-ellipsis').hide();
+                      });
+              });
+          }
+        </script>
+    </footer>
+  </body>
+</html>

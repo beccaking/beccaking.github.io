@@ -1,0 +1,221 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  background: #080808;
+  color: whitesmoke;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+header {
+  background-image: url('./images/background.webp');
+  border-bottom: 1px solid #b5b3af;
+  padding: 6%;
+}
+h3 {
+  width: fit-content;
+}
+h4 {
+  margin-top: 0;
+}
+ul {
+  width: 100%;
+  padding: 0;
+}
+ul li {
+  font-style: italic;
+  margin-left: 15px;
+}
+ul.no-bullets li {
+  list-style-type: none;
+  margin-left: 0;
+}
+img {
+  width: 100%;
+}
+a:hover img {
+  cursor: pointer;
+}
+.float {
+  float: right;
+  width: 85%;
+}
+.full-width {
+  width: 100%;
+}
+.square {
+  display: flex;
+  border-bottom: 1px solid #b5b3af;
+  justify-content: space-between;
+  padding: 3% 6%;
+}
+.square a {
+  color: whitesmoke;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+}
+.square.wyanoke .column.right a:first-of-type {
+  margin-bottom: 44px;
+}
+.square.amerimark {
+  background: linear-gradient(45deg, black, white);
+}
+.square.dataviz {
+  flex-direction: column;
+}
+.square.dataviz span {
+  display: block;
+  margin-bottom: 22px;
+}
+.square.dataviz a.view {
+  font-style: italic;
+  margin-bottom: 22px;
+}
+.square.northcoast {
+  background: #222122;
+}
+.square.northcoast .media {
+  margin-top: 0;
+}
+.square.generalassembly {
+  background: linear-gradient(45deg, black, #7c7c7c);
+}
+.square.generalassembly span {
+  display: block;
+  margin-bottom: 22px;
+}
+.square.generalassembly img {
+  margin-bottom: 44px;
+}
+.square.generalassembly a:last-of-type img {
+  margin-bottom: 0;
+}
+.square.generalassembly a span {
+  font-style: italic;
+}
+#resume {
+  color: #b5b3af;
+  font-style: italic;
+  text-decoration: none;
+}
+.column.left {
+  width: 30%;
+}
+.column.right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.media {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 44px;
+}
+.media div {
+  margin: 0 22px;
+  width: 250px;
+}
+.media img {
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+footer {
+  align-items: flex-start;
+  background: linear-gradient(0deg, #080808, #7c7c7c);
+  color: #fefefe;
+  display: flex;
+  padding: 3% 6%;
+}
+.footer-bio {
+  background: #2a2a2a;
+  border-left: 1px solid #999999;
+  border-right: 1px solid #999999;
+  margin: 10px 35px 0;
+  outline: 1px solid black;
+  padding: 20px;
+}
+.footer-bio-details a {
+  align-items: center;
+  color: #d6d6d6;
+  display: flex;
+  text-decoration: none;
+}
+.footer-bio-details span:first-of-type {
+  font-size: 20px;
+  line-height: 20px;
+}
+.headshot {
+  border: 1px solid #999999;
+  outline: 1px solid #080808;
+  width: 200px;
+}
+.linkedin {
+  margin-left: 5px;
+  width: 20px;
+}
+@media only screen and (max-width: 750px){
+  .float {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .column.left,
+  .column.right {
+    width: 100%;
+  }
+  .column.left {
+    margin-bottom: 8%;
+  }
+  .column.right {
+    align-items: center;
+  }
+  .square {
+    align-items: center;
+    flex-direction: column;
+    padding: 4% 6% 15%;
+  }
+  .square ul:last-child {
+    margin-bottom: 0;
+  }
+  .square.wyanoke .column.right a:first-of-type {
+    margin-bottom: 22px;
+  }
+  .square.amerimark {
+    background: linear-gradient(45deg, black, #bfbfbf);
+  }
+  .square.northcoast a {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .square.generalassembly a {
+    margin: 2% auto;
+    width: 100%;
+  }
+  .square.generalassembly img {
+    margin-bottom: 22px;
+  }
+  .square.generalassembly span {
+    margin-bottom: 10px;
+  }
+  .media {
+    margin-top: 22px;
+  }
+  .media div {
+    margin: 0 2px;
+    width: unset;
+  }
+  footer {
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+  }
+  .footer-bio {
+    margin: 0 35px;
+  }
+  .headshot {
+    margin-bottom: 25px;
+    width: 265px;
+  }
+}
