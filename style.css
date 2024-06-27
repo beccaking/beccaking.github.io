@@ -387,6 +387,10 @@ footer img:hover {
         background: #c175753b;
     }
 
+    body.home .landing-content {
+        width: 90%;
+    }
+
     h2 {
         font-size: 28px;
     }
