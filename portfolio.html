@@ -27,7 +27,7 @@
         <nav>
           <ul>
             <li><a href="./about.html">About Me</a></li>
-            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./portfolio.html" >Portfolio</a></li>
             <li><a href="./experience.html">Experience</a></li>
             <li><a href="./contact.html">Contact</a></li>
           </ul>
@@ -37,7 +37,7 @@
       <nav class="desktop-nav">
         <ul>
           <li><a href="./about.html">About Me</a></li>
-          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li><a href="./portfolio.html" class="active">Portfolio</a></li>
           <li><a href="./experience.html">Experience</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
@@ -46,8 +46,19 @@
     <main>
       <div class="landing-content">
         <div class="inner-container">
-          <div class="project llm-data-viz"></div>
-          <div class="project react-app"></div>
+          <div class="project sentiment-analysis">
+            <div class="details">
+              <div class="description">
+                <h2>AI Sentiment Analysis</h2>
+                <a href="./sentiment-analysis.html" target="_blank">See here</a>
+                <p>AI-powered sentiment analysis using the CanvasJS charting library and Gemini</p>
+                <p>Used AI to convert text into a usable, data-rich JSON object containing information about themes, moods, and key topics in the article</p>
+                <p>Used JSON object to power an interactive interface for breaking down key sentiments in an article or other body of text</p>
+                <p>Created a similar tool to support internal processes at The Wyanoke Group, including analyzing UX research interviews and medical focus group discussions</p>
+              </div>
+              <img src="./images/SentimentAnalysis.png" alt="Sentiment Analysis">
+            </div>
+          </div>
         </div>
       </div>
     </main>

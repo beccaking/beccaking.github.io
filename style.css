@@ -89,6 +89,10 @@ nav ul li a:hover {
     font-size: 32px;
 }
 
+nav ul li a.active {
+    text-decoration: underline;
+}
+
 h1,
 h2 {
     width: fit-content;
@@ -102,6 +106,31 @@ h1 {
 h2 {
     font-size: 34px;
     margin-top: 5px;
+}
+
+.project h2 {
+    font-size: 28px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.project .details {
+    display: flex;
+    flex-direction: row;
+}
+
+.project p {
+    margin-right: 25px;
+}
+
+.project img {
+    margin-top: 15px;
+    width: 50%;
+}
+
+.portfolio .inner-container {
+    margin: 0 auto;
+    width: 95%;
 }
 
 form {
@@ -140,6 +169,10 @@ input[type="submit"] {
     width: 250px;
 }
 
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
 footer img {
     display: block;
     filter: brightness(0) saturate(100%) invert(13%) sepia(65%) saturate(503%) hue-rotate(7deg) brightness(92%) contrast(103%);
@@ -162,13 +195,6 @@ footer img:hover {
     padding-left: 20px;
     width: 100%;
 }
-
-/*
-.inner-container {
-    animation: fadeIn 1s;
-    opacity: 1;
-}
-*/
 
 .name-email {
     display: flex;
@@ -273,6 +299,11 @@ footer img:hover {
     border-right: none;
 }
 
+.experience .inner-container {
+    margin: 20px auto;
+    width: 75%;
+}
+
 .experience .work-columns {
     display: flex;
 }
@@ -358,12 +389,8 @@ body.experience {
         background: #c1757557;
     }
 
-    .experience .work-columns {
-        flex-direction: column;
-    }
-
-    .experience .work-columns .freelance {
-        margin-left: 0;
+    h2 {
+        font-size: 28px;
     }
 
     .mobile-nav {
@@ -381,6 +408,17 @@ body.experience {
         position: absolute;
         top: 55px;
         z-index: 1;
+    }
+
+    nav.show {
+        animation-duration: 0.5s;
+        animation-name: leftEnter;
+        left: 15px;
+    }
+
+    nav.hide {
+        animation-duration: 0.5s;
+        animation-name: leftLeave;
     }
 
     header {
@@ -416,7 +454,30 @@ body.experience {
         float: right;
         font-size: 40px;
         position: absolute;
-        right: 25px;
+        right: 35px;
+        top: 3px;
+    }
+
+    .experience .inner-container {
+        width: 100%;
+    }
+
+    .experience .work-columns {
+        flex-direction: column;
+    }
+
+    .experience .work-columns .freelance {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .project .details {
+        flex-direction: column;
+    }
+
+    .project img {
+        margin-left: -10px;
+        width: 98%;
     }
 
     .about .landing-content .selfie {
@@ -434,22 +495,16 @@ body.experience {
         margin-bottom: 10px;
     }
 
-    nav.show {
-        animation-duration: 0.5s;
-        animation-name: leftEnter;
-        left: 15px;
-    }
-
-    nav.hide {
-        animation-duration: 0.5s;
-        animation-name: leftLeave;
-    }
-
     .name-email {
         flex-direction: column;
     }
 
     textarea {
         width: 300px;
+    }
+
+    .contact .inner-container,
+    .contact form {
+        width: unset;
     }
 }
