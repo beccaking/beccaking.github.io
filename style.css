@@ -449,7 +449,10 @@ footer img:hover {
     .portfolio nav ul li a,
     .contact nav ul li a {
         border-right: none;
+        display: block;
+        margin: 5px 15px 5px 5px;
         padding-right: 0;
+        width: 100%;
     }
 
     body:not(.home) h1 {
