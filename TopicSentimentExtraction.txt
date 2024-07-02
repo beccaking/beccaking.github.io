@@ -1,0 +1,34 @@
+I will provide you with a transcript. I want you to respond with a JSON object structured like this:
+{"entities" :
+{"people" : ["output1", "output2", "output3"],
+"organizations" : ["output1", "output2", "output3"],
+"locations" : ["output1", "output2", "output3"]
+},
+"overview": "output1",
+"keywords" : {"drugs" : ["output1", "output2", "output3"], "specialties" : ["output1", "output2", "output3"], 
+"insurance" : ["output1", "output2", "output3"], 
+"clinical" : ["output1", "output2", "output3"], "misc" : ["output1", "output2", "output3"]},
+"sentiment" : {"overall" : "output1", "shift" : "output1", "explanation": "output1", "mood" : [{"name": "output1", "color": "output1", "percentage" : "output1", "code": "output1"}, {"name": "output2", "color": "output2", "percentage" : "output2", "code": "output2"}, {"name": "output3", "color": "output3", "percentage" : "output3", "code": "output3"}]},
+"themes" : [
+{"topic" : "output1", "summary" : "output1", "sentiment" : "output1", "mood" : [{"name" : "output1", "color": "output1", "percentage" : "output1", "code" : "output1"}, {"name" : "output2", "color": "output2", "percentage" : "output2", "code" : "output2"}, {"name" : "output3", "color": "output3", "percentage" : "output3", "code" : "output3"}]},
+{"topic" : "output2", "summary" : "output2", "sentiment" : "output2", "mood" : [{"name" : "output1", "color": "output1", "percentage" : "output1", "code" : "output1"}, {"name" : "output2", "color": "output2", "percentage" : "output2", "code" : "output2"}, {"name" : "output3", "color": "output3", "percentage" : "output3", "code" : "output3"}]},
+{"topic" : "output3", "summary" : "output3", "sentiment" : "output3", "mood" : [{"name" : "output1", "color": "output1", "percentage" : "output1", "code" : "output1"}, {"name" : "output2", "color": "output2", "percentage" : "output2", "code" : "output2"}, {"name" : "output3", "color": "output3", "percentage" : "output3", "code" : "output3"}]}
+]
+}
+
+Here are several color sets. I will reference these later.
+
+Red = ['#880808', '#AA4A44', '#EE4B2B', '#A52A2A', '#800020', '#D22B2B', '#8B0000', '#7B1818', '#9A2A2A', '#800000', '#FF0000']
+Green = ['#50C878', '#4F7942', '#228B22', '#008000', '#4CBB17', '#0BDA51', '#009E60', '#00FF7F']
+Blue = ['#89CFF0', '#7393B3', '#5F9EA0', '#6495ED', '#6F8FAF', '#6082B6', '#ADD8E6', '#A7C7E7']
+
+Where I have listed "output1", "output2", "output3", I want you to replace that with outputs from the following content:
+For entities, I want a list of named people, organizations, and geographical locations mentioned in the transcript. Do not include locations like states as organizations.
+For overview, I want a breakdown of the conversation in the transcript, including thoughts, feelings, and conclusions about various topics.
+For keywords, I want lists of keywords divided by category: medications, medical specialties, insurance-related terms, clinical practice topics, and misc.
+For sentiment, I want the overall tone expressed in the transcript. Please also provide details on any tonal shift from the start to the end of the discussion, whether more positive, more negative, or no change. And provide an explanation of what influenced the tone and how it may have shifted around certain topics; in this section, be as specific as possible. For mood, provide a thorough set of examples of the kinds of emotions displayed in the transcript by name, and include a hex code from the green set above if the mood is more positive, from the red set if the mood is more negative, and from the blue set if the mood is neutral. Make sure not to use the same hex code twice. Also provide a percentage of the conversation that reflected each mood, making sure that they add up to 100%. For code, provide 1 if the tone is positive, 2 if the tone is neutral, and 3 if the tone is negative.
+For themes, I want at least 10 themes including the name of a topic, summary of that topic, and sentiment about that topic. Also include the names of at least five mood-related adjectives describing their attitude toward the topic. For each mood, if the mood is more positive, provide a hex code from the green set for the color. If the mood is more negative, provide a hex code from the red set for the color. If the mood is neutral, provide a hex code from the blue set for the color. Make sure that you do not use the same hex code twice. Start with the more positive moods and move into more negative ones as you go. Also provide a percentage of the conversation that reflected each mood, making sure that they add up to 100%. For code, provide 1 if the tone is positive, 2 if the tone is neutral, and 3 if the tone is negative.
+
+Please provide simple lists that are easy to parse. Do not include markdown in responses.
+
+The document is attached.

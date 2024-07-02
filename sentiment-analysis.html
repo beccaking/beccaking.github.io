@@ -13,6 +13,10 @@
                 font-family: 'Helvetica', sans-serif;
             }
 
+            body {
+                background: #eaeaea;
+            }
+
             a {
                 color: #267ca5;
             }
@@ -22,7 +26,11 @@
             }
 
             .container {
+                background: white;
+                border: 1px solid #3a3a3a;
                 margin: 10px auto;
+                outline: 1px solid black;
+                padding: 20px;
                 width: 60%;
             }
 
@@ -31,7 +39,16 @@
             }
 
             .switch-buttons button {
+                border: 1px solid #92a6ab;
                 font-size: 16px;
+                outline: 1px solid #4a4949;
+                padding: 10px;
+            }
+
+            .switch-buttons button:hover {
+                border: 1px solid black;
+                cursor: pointer;
+                opacity: .5;
             }
 
             .switch-buttons .overall {
@@ -44,7 +61,20 @@
 
             @media only screen and (max-width: 1200px) {
                 .container {
-                    width: 100%;
+                    width: 95%;
+                }
+            }
+
+            @media only screen and (max-width: 480px) {
+                .container {
+                    border: unset;
+                    outline: unset;
+                }
+
+                .switch-buttons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                 }
             }
         </style>
@@ -53,9 +83,9 @@
     <div>
         <div class="container">
             <h1>News Sentiment Analysis</h1>
-            <h2>How Your Mind and Body Change in Midlife</h2>
-            <p>A breakdown of the article from the New York Times by Dana G. Smith</p>
-            <a href="https://www.nytimes.com/interactive/2024/06/24/well/live/midlife-health-body-changes-guide.html" target="_blank">See on NYTimes.org</a>
+            <h2>A.I. Begins Ushering In an Age of Killer Robots</h2>
+            <p>A breakdown of the article from the New York Times by Paul Mozur and Adam Satariano</p>
+            <a href="https://www.nytimes.com/2024/07/02/technology/ukraine-war-ai-weapons.html" target="_blank">See on NYTimes.org</a>
             <div class="switch-buttons">
                 <button class="overall">All</button>
             </div>
@@ -68,7 +98,7 @@
 
   <script>
 
-    let output1 = {"entities": {"people": ["Dana G. Smith", "Margie Lachman", "Scott Trappe", "Arun Karlamangla", "Stephanie Faubion", "Herman Pontzer", "Susan Roberts", "Holly Thomas", "Shalender Bhasin", "Alan Shindel", "Gagan Wig", "Susan Charles", "David Almeida", "Albert Tercero", "Deanna Donegan", "Hang Do Thi Duc"], "organizations": ["Brandeis University", "University of California", "Los Angeles", "Human Performance Laboratory", "Ball State University", "Mayo Clinic’s Center for Women’s Health", "The Menopause Society", "Science", "Duke University", "Geisel School of Medicine at Dartmouth", "Brigham and Women’s Hospital", "Boston", "American Urological Association", "University of California, San Francisco", "University of Pittsburgh", "Pennsylvania State University", "University of California, Irvine", "The Times"], "locations": ["Boston"]}, "overview": "The article discusses common health concerns associated with middle age, specifically targeting those aged 40 to 60. It addresses concerns like aches and pains, unexpected weight gain, perimenopause, decreased libido, memory loss, chronic diseases, and stress management. The article aims to debunk myths, provide reassurance that certain changes are natural, and emphasize the importance of proactive health measures like exercise, a balanced diet, and regular screenings. It also highlights the significance of mental well-being and healthy coping mechanisms during this life stage.", "keywords": {"drugs": ["Hormone therapy", "hormonal birth control", "testosterone therapy"], "specialties": ["psychology", "human bioenergetics", "geriatrics", "women’s health", "evolutionary anthropology", "medicine", "endocrinology", "urology", "clinical and translational science", "human development and family studies", "psychological science"], "insurance": [], "clinical": ["muscle soreness", "muscle mass", "joint pain", "bone density loss", "hot flashes", "night sweats", "irritability", "brain fog", "anxiety", "depression", "insomnia", "sleep disruption", "vaginal dryness", "low libido", "erectile dysfunction", "hypertension", "high cholesterol", "diabetes", "memory loss", "brain volume", "attention", "memory", "executive functioning", "cognition", "early onset dementia", "chronic diseases", "cancer", "cardiovascular disease", "blood pressure", "cholesterol", "pre-diabetes", "mammograms", "colonoscopies", "blood sugar tests", "bone density scans", "osteoporosis", "prostate cancer", "lung cancer", "stress", "burnout"], "misc": ["metabolism", "calorie restriction", "intermittent fasting", "longevity", "nutrition", "sleep", "social connections", "crystallized intelligence", "wisdom"]}, "sentiment": {"overall": "Neutral", "shift": "Slightly More Positive", "explanation": "The article initially presents common anxieties and concerns related to midlife health, adopting a neutral tone to explain the scientific basis for such changes. However, as the article progresses, it shifts to a slightly more positive tone, emphasizing that many of these concerns are manageable and offering proactive solutions. The article ends on a reassuring note, focusing on the positive aspects of aging, such as increased wisdom and life satisfaction in later adulthood.", "mood": [{"name": "Concerned", "color": "#A52A2A", "percentage": "30", "code": "3"}, {"name": "Informative", "color": "#89CFF0", "percentage": "40", "code": "2"}, {"name": "Hopeful", "color": "#50C878", "percentage": "30", "code": "1"}]}, "themes": [{"topic": "Aches and Pains", "summary": "Muscle soreness, joint pain, and bone density loss are common in midlife due to reduced activity, natural muscle decline, and hormonal changes (menopause in women). Exercise, including strength training and aerobic activity, is recommended to counteract these changes.", "sentiment": "Neutral", "mood": [{"name": "Concerned", "color": "#AA4A44", "percentage": "30", "code": "3"}, {"name": "Relieved", "color": "#4F7942", "percentage": "70", "code": "1"}]}, {"topic": "Weight Gain", "summary": "Weight gain in midlife is often attributed to a slowing metabolism, but research suggests it's more likely due to a gradual increase in calorie intake over time. Additionally, muscle loss and brain shrinkage can contribute to metabolic changes.", "sentiment": "Neutral", "mood": [{"name": "Anxious", "color": "#EE4B2B", "percentage": "40", "code": "3"}, {"name": "Curious", "color": "#7393B3", "percentage": "60", "code": "2"}]}, {"topic": "Perimenopause", "summary": "Perimenopause, the period before menopause, can last up to 10 years and cause fluctuating hormone levels, leading to hot flashes, night sweats, mood swings, and sleep disruptions. Hormone therapy or birth control can help manage these symptoms.", "sentiment": "Neutral", "mood": [{"name": "Overwhelmed", "color": "#880808", "percentage": "50", "code": "3"}, {"name": "Informed", "color": "#5F9EA0", "percentage": "50", "code": "2"}]}, {"topic": "Low Libido", "summary": "Decreased sex drive affects both men and women in midlife. In men, it can be related to declining testosterone or erectile dysfunction, while in women, it's often linked to hormonal changes, relationship factors, and stress.", "sentiment": "Neutral", "mood": [{"name": "Concerned", "color": "#D22B2B", "percentage": "40", "code": "3"}, {"name": "Understanding", "color": "#6495ED", "percentage": "60", "code": "2"}]}, {"topic": "Memory Loss", "summary": "Age-related memory decline is normal due to shrinking brain volume. However, lifestyle factors like exercise, nutrition, sleep, social connections, and mental stimulation can impact how quickly cognition changes.", "sentiment": "Neutral", "mood": [{"name": "Worried", "color": "#8B0000", "percentage": "20", "code": "3"}, {"name": "Optimistic", "color": "#228B22", "percentage": "80", "code": "1"}]}, {"topic": "Chronic Diseases", "summary": "The risk of developing chronic conditions like cardiovascular disease, cancer, and diabetes rises in middle age due to the cumulative effect of lifestyle factors, environmental exposures, and hormonal shifts. Regular screenings are essential for early detection and intervention.", "sentiment": "Neutral", "mood": [{"name": "Alert", "color": "#6F8FAF", "percentage": "60", "code": "2"}, {"name": "Proactive", "color": "#008000", "percentage": "40", "code": "1"}]}, {"topic": "Stress", "summary": "Midlife can be a stressful period due to caregiving responsibilities, career demands, and financial pressures. However, research suggests that people in midlife are generally better equipped to handle stress and may experience increased life satisfaction in later years.", "sentiment": "Slightly Positive", "mood": [{"name": "Stressed", "color": "#7B1818", "percentage": "30", "code": "3"}, {"name": "Confident", "color": "#4CBB17", "percentage": "70", "code": "1"}]}, {"topic": "Exercise", "summary": "Exercise is crucial for maintaining physical and cognitive health throughout midlife. Strength training helps prevent muscle loss and bone density decline, while aerobic exercise benefits cardiovascular health and overall well-being.", "sentiment": "Positive", "mood": [{"name": "Motivated", "color": "#0BDA51", "percentage": "100", "code": "1"}]}, {"topic": "Hormonal Changes", "summary": "Hormonal changes during perimenopause and menopause can significantly impact women's physical and emotional health. Hormone therapy can be an effective treatment option for managing symptoms.", "sentiment": "Neutral", "mood": [{"name": "Uncertain", "color": "#6082B6", "percentage": "50", "code": "2"}, {"name": "Reassured", "color": "#009E60", "percentage": "50", "code": "1"}]}, {"topic": "Life Satisfaction", "summary": "While midlife is often associated with a dip in life satisfaction, studies show that happiness tends to increase in later adulthood. This may be due to a reconciliation of expectations and achievements, leading to a more grateful and content outlook.", "sentiment": "Positive", "mood": [{"name": "Reflective", "color": "#ADD8E6", "percentage": "40", "code": "2"}, {"name": "Content", "color": "#00FF7F", "percentage": "60", "code": "1"}]}]}
+    let output1 = {"entities": {"people": ["Oleksii Babenko", "Sasha Maslov", "Mykhailo Fedorov", "Stuart Russell", "Dev", "Viktor", "Rostyslav", "Yurii Klontsak", "Eric Schmidt", "Eveline Buchatskiy", "Oleksandr Yabchanka", "Anton Skrypnyk", "Serhii Kupriienko", "Alexander Kmentt"], "organizations": ["Vyriy", "New York Times", "United States", "China", "Russia", "Best Buy", "University of California, Berkeley", "92nd Assault Brigade", "Pixar", "DevDroid", "D3", "Helsing", "Da Vinci Wolves", "Roboneers", "Swarmer", "Amazon", "International Committee of the Red Cross", "U.N.", "Pentagon"], "locations": ["Kyiv", "Ukraine", "Russia", "Silicon Valley", "Donbas", "Bakhmut", "Vienna", "Austria"]}, "overview": "This article explores the rapid advancement of autonomous drone technology in Ukraine, driven by the ongoing war with Russia.  Ukrainian companies and military units are developing and deploying increasingly sophisticated drones capable of autonomous targeting, swarming attacks, and even ground-based combat. While acknowledging the ethical concerns surrounding autonomous weapons, the article highlights Ukraine's urgent need for these technologies to defend against Russian aggression.  The article also touches on the global implications of these advancements, raising concerns about a new arms race and the potential for widespread availability of lethal autonomous weapons.", "keywords": {"drugs": [], "specialties": ["artificial intelligence", "deep learning", "computer vision", "drone technology"], "insurance": [], "clinical": [], "misc": ["autonomous weapons", "killer robots", "warfare", "military technology", "innovation", "ethics of AI", "international law", "arms race"]}, "sentiment": {"overall": "Neutral", "shift": "No change", "explanation": "The article maintains a neutral tone throughout, presenting a balanced view of the development and deployment of autonomous weapons in Ukraine. While acknowledging the potential for these technologies to escalate conflict and the ethical dilemmas they pose, the article also highlights Ukraine's perspective, emphasizing their need to defend themselves against Russian aggression. The article avoids sensationalism and presents a nuanced perspective on a complex issue.", "mood": [{"name": "Informative", "color": "#6495ED", "percentage": "50%", "code": "2"}, {"name": "Concerned", "color": "#AA4A44", "percentage": "30%", "code": "3"}, {"name": "Determined", "color": "#228B22", "percentage": "20%", "code": "1"}]}, "themes": [{"topic": "Ukrainian Innovation", "summary": "The article highlights the ingenuity and adaptability of Ukrainian engineers and soldiers who are rapidly developing and deploying advanced drone technologies in response to the war with Russia.", "sentiment": "Positive", "mood": [{"name": "Innovative", "color": "#50C878", "percentage": "60%", "code": "1"}, {"name": "Determined", "color": "#228B22", "percentage": "30%", "code": "1"}, {"name": "Resourceful", "color": "#008000", "percentage": "10%", "code": "1"}]}, {"topic": "Military Necessity", "summary": "The article emphasizes Ukraine's reliance on these rapidly evolving technologies to level the playing field against a larger and better-equipped adversary.", "sentiment": "Neutral", "mood": [{"name": "Pragmatic", "color": "#7393B3", "percentage": "50%", "code": "2"}, {"name": "Urgent", "color": "#5F9EA0", "percentage": "30%", "code": "2"}, {"name": "Determined", "color": "#4CBB17", "percentage": "20%", "code": "1"}]}, {"topic": "Ethical Concerns", "summary": "The article acknowledges the ethical dilemmas surrounding autonomous weapons, particularly the potential for unintended consequences and the lack of human control over lethal decisions.", "sentiment": "Negative", "mood": [{"name": "Apprehensive", "color": "#880808", "percentage": "40%", "code": "3"}, {"name": "Concerned", "color": "#AA4A44", "percentage": "30%", "code": "3"}, {"name": "Uncertain", "color": "#6F8FAF", "percentage": "30%", "code": "2"}]}, {"topic": "Global Arms Race", "summary": "The article expresses concern that the rapid advancements in Ukraine could trigger a global arms race as nations seek to develop and acquire these potentially destabilizing technologies.", "sentiment": "Negative", "mood": [{"name": "Alarmed", "color": "#EE4B2B", "percentage": "50%", "code": "3"}, {"name": "Pessimistic", "color": "#A52A2A", "percentage": "30%", "code": "3"}, {"name": "Resigned", "color": "#6082B6", "percentage": "20%", "code": "2"}]}, {"topic": "International Regulation", "summary": "The article discusses the challenges of establishing international regulations for autonomous weapons, noting the lack of consensus and the geopolitical obstacles to reaching a binding agreement.", "sentiment": "Neutral", "mood": [{"name": "Skeptical", "color": "#89CFF0", "percentage": "60%", "code": "2"}, {"name": "Concerned", "color": "#AA4A44", "percentage": "40%", "code": "3"}]}, {"topic": "Autonomous Targeting", "summary": "The article describes the development of drones and other weapons systems that can autonomously identify and engage targets, using technologies like computer vision and deep learning.", "sentiment": "Neutral", "mood": [{"name": "Informative", "color": "#7393B3", "percentage": "70%", "code": "2"}, {"name": "Wary", "color": "#D22B2B", "percentage": "30%", "code": "3"}]}, {"topic": "Swarming Drones", "summary": "The article discusses the use of multiple drones operating in a coordinated manner to overwhelm defenses and carry out simultaneous attacks.", "sentiment": "Neutral", "mood": [{"name": "Inquisitive", "color": "#5F9EA0", "percentage": "60%", "code": "2"}, {"name": "Apprehensive", "color": "#800020", "percentage": "40%", "code": "3"}]}, {"topic": "Human-Machine Collaboration", "summary": "The article explores the evolving relationship between human operators and autonomous weapons, highlighting the potential for these technologies to augment human capabilities but also the risks of overreliance.", "sentiment": "Neutral", "mood": [{"name": "Curious", "color": "#ADD8E6", "percentage": "50%", "code": "2"}, {"name": "Wary", "color": "#D22B2B", "percentage": "50%", "code": "3"}]}, {"topic": "Future of Warfare", "summary": "The article suggests that the innovations emerging from the conflict in Ukraine offer a glimpse into the future of warfare, where autonomous weapons and artificial intelligence play increasingly prominent roles.", "sentiment": "Neutral", "mood": [{"name": "Uncertain", "color": "#6F8FAF", "percentage": "60%", "code": "2"}, {"name": "Intrigued", "color": "#5F9EA0", "percentage": "40%", "code": "2"}]}, {"topic": "Public Perception", "summary": "The article touches on the potential psychological impact of these technologies on both soldiers and the public, acknowledging the fear and uncertainty surrounding autonomous weapons.", "sentiment": "Negative", "mood": [{"name": "Anxious", "color": "#8B0000", "percentage": "50%", "code": "3"}, {"name": "Concerned", "color": "#AA4A44", "percentage": "30%", "code": "3"}, {"name": "Disturbed", "color": "#A52A2A", "percentage": "20%", "code": "3"}]}]}
 
     window.onload = function () {
   
@@ -81,21 +111,21 @@
     let negativeMoods = overallSentiment.mood.filter(function(data){ return data.code == 3})
   
     for(i=0;i<positiveMoods.length;i++) {
-      dataPoints.push({ y: positiveMoods[i].percentage, label: positiveMoods[i].name, color:positiveMoods[i].color, tooltip: positiveMoods[i].percentage.toString() + '%'})
+      dataPoints.push({ y: positiveMoods[i].percentage.replace(/%/g, ''), label: positiveMoods[i].name, color:positiveMoods[i].color, tooltip: positiveMoods[i].percentage.replace(/%/g, '').toString() + '%'})
     }
   
     for(i=0;i<neutralMoods.length;i++) {
-      dataPoints.push({ y: neutralMoods[i].percentage, label: neutralMoods[i].name, color: neutralMoods[i].color, tooltip: neutralMoods[i].percentage.toString() + '%' })
+      dataPoints.push({ y: neutralMoods[i].percentage.replace(/%/g, ''), label: neutralMoods[i].name, color: neutralMoods[i].color, tooltip: neutralMoods[i].percentage.replace(/%/g, '').toString() + '%' })
     }
   
     for(i=0;i<negativeMoods.length;i++) {
-      dataPoints.push({ y: negativeMoods[i].percentage, label: negativeMoods[i].name, color: negativeMoods[i].color, tooltip: negativeMoods[i].percentage.toString() + '%' })
+      dataPoints.push({ y: negativeMoods[i].percentage.replace(/%/g, ''), label: negativeMoods[i].name, color: negativeMoods[i].color, tooltip: negativeMoods[i].percentage.replace(/%/g, '').toString() + '%' })
     }
 
     let chart = new CanvasJS.Chart("chartContainer1", {
       animationEnabled: true,
       title:{
-        text: "How Your Body and Mind Change in Midlife, New York Times",
+        text: "A.I. Begins Ushering In an Age of Killer Robots",
         horizontalAlign: "left"
       },
       data: [{
@@ -126,15 +156,15 @@
           negativeMoods = mood.filter(function(data){ return data.code == 3})
   
           for(j=0;j<positiveMoods.length;j++) {
-            dataPoints.push({ y: positiveMoods[j].percentage, label: positiveMoods[j].name, color:positiveMoods[j].color, tooltip: positiveMoods[j].percentage.toString() + '%' })
+            dataPoints.push({ y: positiveMoods[j].percentage.replace(/%/g, ''), label: positiveMoods[j].name, color:positiveMoods[j].color, tooltip: positiveMoods[j].percentage.replace(/%/g, '').toString() + '%' })
           }
   
           for(j=0;j<neutralMoods.length;j++) {
-            dataPoints.push({ y: neutralMoods[j].percentage, label: neutralMoods[j].name, color: neutralMoods[j].color, tooltip: neutralMoods[j].percentage.toString() + '%'})
+            dataPoints.push({ y: neutralMoods[j].percentage.replace(/%/g, ''), label: neutralMoods[j].name, color: neutralMoods[j].color, tooltip: neutralMoods[j].percentage.replace(/%/g, '').toString() + '%'})
           }
   
           for(j=0;j<negativeMoods.length;j++) {
-            dataPoints.push({ y: negativeMoods[j].percentage, label: negativeMoods[j].name, color: negativeMoods[j].color, tooltip: negativeMoods[j].percentage.toString() + '%'})
+            dataPoints.push({ y: negativeMoods[j].percentage.replace(/%/g, ''), label: negativeMoods[j].name, color: negativeMoods[j].color, tooltip: negativeMoods[j].percentage.replace(/%/g, '').toString() + '%'})
           }
   
           chart.options.data[0].dataPoints = dataPoints
@@ -153,19 +183,19 @@
         let negativeMoods = overallSentiment.mood.filter(function(data){ return data.code == 3})
     
         for(i=0;i<positiveMoods.length;i++) {
-        dataPoints.push({ y: positiveMoods[i].percentage, label: positiveMoods[i].name, color:positiveMoods[i].color, tooltip: positiveMoods[i].percentage.toString() + '%'})
+        dataPoints.push({ y: positiveMoods[i].percentage.replace(/%/g, ''), label: positiveMoods[i].name, color:positiveMoods[i].color, tooltip: positiveMoods[i].percentage.replace(/%/g, '').toString() + '%'})
         }
     
         for(i=0;i<neutralMoods.length;i++) {
-        dataPoints.push({ y: neutralMoods[i].percentage, label: neutralMoods[i].name, color: neutralMoods[i].color, tooltip: neutralMoods[i].percentage.toString() + '%' })
+        dataPoints.push({ y: neutralMoods[i].percentage.replace(/%/g, ''), label: neutralMoods[i].name, color: neutralMoods[i].color, tooltip: neutralMoods[i].percentage.replace(/%/g, '').toString() + '%' })
         }
     
         for(i=0;i<negativeMoods.length;i++) {
-        dataPoints.push({ y: negativeMoods[i].percentage, label: negativeMoods[i].name, color: negativeMoods[i].color, tooltip: negativeMoods[i].percentage.toString() + '%' })
+        dataPoints.push({ y: negativeMoods[i].percentage.replace(/%/g, ''), label: negativeMoods[i].name, color: negativeMoods[i].color, tooltip: negativeMoods[i].percentage.replace(/%/g, '').toString() + '%' })
         }
 
         chart.options.data[0].dataPoints = dataPoints
-        chart.options.title.text = 'How Your Body and Mind Change in Midlife, New York Times'
+        chart.options.title.text = 'A.I. Begins Ushering In an Age of Killer Robots'
         chart.render()
 
         $('.overview').html('<b>Overview:</b> ' + output1.overview)
