@@ -45,6 +45,7 @@ body.home {
 body.home .landing-content {
     border-bottom: 4px solid #291f02;
     padding-left: 10%;
+    width: 90%;
 }
 
 p,
@@ -121,13 +122,24 @@ h2 {
     flex-direction: row;
 }
 
-.project p {
-    margin-right: 25px;
+.project .details .link {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.project .description {
+    margin-right: 15px;
 }
 
 .project img {
+    background: white;
+    border: 1px solid #2a1f02;
     margin-top: 15px;
-    width: 50%;
+    min-width: 285px;
+    object-fit: contain;
+    padding: 8px;
+    width: 60%;
 }
 
 .portfolio .inner-container {
@@ -194,7 +206,6 @@ footer img:hover {
     margin-top: 40px;
     min-height: 500px;
     padding-bottom: 20px;
-    padding-left: 20px;
     width: 100%;
 }
 
@@ -242,7 +253,8 @@ footer img:hover {
     margin-left: 50px;
     object-fit: cover;
     outline: 1px solid #d083d0;
-    width: 240px;
+    max-width: 300px;
+    min-width: 240px;
 }
 
 .about .landing-content .linkedin {
@@ -303,7 +315,7 @@ footer img:hover {
 
 .experience .inner-container {
     margin: 20px auto;
-    width: 75%;
+    width: 90%;
 }
 
 .experience .work-columns {
@@ -366,9 +378,49 @@ footer img:hover {
     margin-top: 35px;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1200px) {
-    html {
-        background: #c175753b;
+.mobile-nav nav {
+    background: white;
+    box-shadow: 1px 1px 2px #2a1f02;
+    left: -50%;
+    position: absolute;
+    top: 55px;
+    z-index: 1;
+}
+
+nav.show {
+    animation-duration: 0.5s;
+    animation-name: leftEnter;
+    left: 15px;
+}
+
+nav.hide {
+    animation-duration: 0.5s;
+    animation-name: leftLeave;
+}
+
+@media only screen and (max-width: 991px) {
+    .project .details {
+        flex-direction: column;
+    }
+
+    .project .details .link {
+        justify-content: unset;
+    }
+
+    .about .inner-container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 748px) {
+
+    header {
+        align-items: center;
+        display: flex;
+        height: 70px;
+        margin-bottom: -15px;
+        position: relative;
+        top: 8px;
     }
 
     .about .landing-content .inner-container {
@@ -377,22 +429,8 @@ footer img:hover {
         width: 90%;
     }
 
-    .selfie {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    body.home {
-        background: #c175753b;
-    }
-
-    body.home .landing-content {
-        width: 90%;
-    }
-
-    h2 {
-        font-size: 28px;
+    .about .landing-content .selfie {
+        margin-left: 0;
     }
 
     .mobile-nav {
@@ -401,31 +439,6 @@ footer img:hover {
 
     .desktop-nav {
         display: none;
-    }
-
-    .mobile-nav nav {
-        background: white;
-        box-shadow: 1px 1px 2px #2a1f02;
-        left: -50%;
-        position: absolute;
-        top: 55px;
-        z-index: 1;
-    }
-
-    nav.show {
-        animation-duration: 0.5s;
-        animation-name: leftEnter;
-        left: 15px;
-    }
-
-    nav.hide {
-        animation-duration: 0.5s;
-        animation-name: leftLeave;
-    }
-
-    header {
-        display: flex;
-        height: 30px;
     }
 
     .about nav ul,
@@ -455,12 +468,53 @@ footer img:hover {
         width: 100%;
     }
 
+    .hamburger div {
+        height: 8px;
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    body:not(.home) h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body.home {
+        background: #c175753b;
+    }
+
+    body.home .landing-content {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    header {
+        align-items: unset;
+        height: 30px;
+        margin-bottom: unset;
+        position: unset;
+    }
+
+    .hamburger div {
+        height: 5px;
+        width: 30px;
+    }
+
     body:not(.home) h1 {
         float: right;
         font-size: 40px;
         position: absolute;
         right: 35px;
         top: 3px;
+    }
+
+    .project img {
+        width: 100%;
     }
 
     .experience .inner-container {
@@ -474,15 +528,6 @@ footer img:hover {
     .experience .work-columns .freelance {
         margin-left: 0;
         width: 100%;
-    }
-
-    .project .details {
-        flex-direction: column;
-    }
-
-    .project img {
-        margin-left: -10px;
-        width: 98%;
     }
 
     .about .landing-content .selfie {
