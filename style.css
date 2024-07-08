@@ -517,10 +517,6 @@ nav.hide {
         width: 100%;
     }
 
-    .experience .inner-container {
-        width: 100%;
-    }
-
     .experience .work-columns {
         flex-direction: column;
     }
@@ -555,6 +551,6 @@ nav.hide {
 
     .contact .inner-container,
     .contact form {
-        width: unset;
+        width: 90%;
     }
 }
