@@ -124,12 +124,8 @@ h2 {
 
 .project .details .link {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 70%;
-}
-
-.project .description {
-    margin-right: 15px;
 }
 
 .project img {
@@ -398,6 +394,12 @@ nav.hide {
     animation-name: leftLeave;
 }
 
+.sentiment-analysis {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #fdd1e6;
+}
+
 @media only screen and (max-width: 991px) {
     .project .details {
         flex-direction: column;
@@ -513,7 +515,8 @@ nav.hide {
         top: 3px;
     }
 
-    .project img {
+    .project img,
+    .project .details .link {
         width: 100%;
     }
 
