@@ -48,43 +48,16 @@
       <div class="landing-content">
         <div class="inner-container">
           <h2>Contact Me</h2>
-          <form id="contact-form">
-            <input type="hidden" name="contact_number" value="123">
-            <div class="name-email">
-              <div class="form-group">
-                <label for="user-name">Name</label>
-                <input id="user-name" type="text" name="user_name" required>
-              </div>
-              <div class="form-group">
-                <label for="user-email">Email</label>
-                <input id="user-email" type="email" name="user_email" required>
-              </div>
-            </div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-            <input type="submit" value="Send">
-            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-          </form>
-          <p class="error-message">Please try again.</p>
-          <p class="success-message">Thank you for your message! I'll be in touch with you shortly.</p>
+          <p>Thank you for visiting my website! Feel free to reach out if you'd like to connect.</p>
           <div class="contact-details">
-            <h3>rebecca.lynne.king@gmail.com</h3>
+            <h3><a href="mailto:rebecca.lynne.king@gmail.com">rebecca.lynne.king@gmail.com</a></h3>
+            <h3><a href="https://www.linkedin.com/in/becca-king-/" target="_blank">LinkedIn</a></h3>
           </div>
         </div>
       </div>
     </main>
     <footer>      
       <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-      
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
-
-      <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-      </script>
 
       <script>
 
@@ -100,35 +73,6 @@
           $(this).hide();
         })
       </script>
-
-      <script>
-        emailjs.init({
-          publicKey: 'vL3IgMGtW5FA7Fvg3',
-        });
-        </script>
-
-        <script type="text/javascript">
-          window.onload = function() {
-              document.getElementById('contact-form').addEventListener('submit', function(event) {
-                  event.preventDefault();
-                  
-                  $('input[type="submit"]').addClass('loading-wheel')
-                  $('.lds-ellipsis').css('display', 'inline-block')
-
-                  emailjs.sendForm('service_rcnfp55', 'template_1rgpcxv', this)
-                      .then(() => {
-                          $('.success-message').show();
-                          $('form').hide();
-                          $('h2').hide();
-                          $('.landing-content').addClass('shorter')
-                      }, (error) => {
-                          $('.error-message').show();
-                          $('input[type="submit"]').removeClass('loading-wheel')
-                          $('.lds-ellipsis').hide();
-                      });
-              });
-          }
-        </script>
     </footer>
   </body>
 </html>
